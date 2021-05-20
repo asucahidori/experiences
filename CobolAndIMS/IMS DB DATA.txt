@@ -1,0 +1,14 @@
+E11111CHEN      BOB      123456789       Employee Segment
+15TCU           AA                       Education segments
+07PURDUE        BA
+E22222SMITH     JOHN     113121456       Employee segment
+08LOYOLA        BS                       Education segment
+E333333JONES    JIM      123478901       Employee segment
+11NYU           BS                       Education segment
+E44444DAVIS     LOU      156728933       Employee segment
+E66666BURNS     FRANC    188728933       Employee segment
+13UCLA          MS                       Education segment
+E77777HIGGIN    MARY     123456783       Employee segment
+18COLGATE       AA                       Education segment
+00BAYLOR        BA
+19SMU           MS                                    

@@ -1,0 +1,7 @@
+****** ***************************** Top of Data ******************************
+000100 INQUIRY           E11111                                                
+000200 UPDATE  DELETE    E22222  SMITH  JOHN  421577910                        
+000300 UPDATE  REPLACE   E33333  JONES  JIM   128901135                        
+000400 UPDATE  INSERT    E55555  ASH    AL    647908150                        
+000500 INSERT  13UCLA    BA                                                    
+****** **************************** Bottom of Data ****************************
