@@ -1,0 +1,30 @@
+000001       ******************************************************************
+000002       * DCLGEN TABLE(P390.CUSTINFO)                                    *
+000003       *        LIBRARY(COBOL.TEST.DB2.COPYBOOK(TBLCUST))               *
+000004       *        LANGUAGE(COBOL)                                         *
+000005       *        QUOTE                                                   *
+000006       * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+000007       ******************************************************************
+000008            EXEC SQL DECLARE P390.CUSTINFO TABLE                         
+000009            ( CUSTIDC                        CHAR(18) NOT NULL,          
+000010              CUSTNAME                       CHAR(16) NOT NULL,          
+000011              CUSTSEX                        CHAR(1) NOT NULL,           
+000012              CUSTADDR                       CHAR(30) NOT NULL,          
+000013              CUSTTEL                        CHAR(11) NOT NULL,          
+000014              CUSTCITY                       CHAR(15) NOT NULL,          
+000015              ZIPCODE                        CHAR(6) NOT NULL            
+000016            ) END-EXEC.                                                  
+000017       ******************************************************************
+000018       * COBOL DECLARATION FOR TABLE P390.CUSTINFO                      *
+000019       ******************************************************************
+000020        01  DCLCUSTINFO.                                                 
+000021            10 CUSTIDC              PIC X(18).                           
+000022            10 CUSTNAME             PIC X(16).                           
+000023            10 CUSTSEX              PIC X(1).                            
+000024            10 CUSTADDR             PIC X(30).                           
+000025            10 CUSTTEL              PIC X(11).                           
+000026            10 CUSTCITY             PIC X(15).                           
+000027            10 ZIPCODE              PIC X(6).                            
+000028       ******************************************************************
+000029       * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 7       *
+000030       ******************************************************************
