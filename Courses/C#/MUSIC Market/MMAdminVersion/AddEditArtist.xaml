@@ -1,0 +1,28 @@
+﻿<Window x:Class="MMAdminVersion.AddEditArtist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MMAdminVersion"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner" FontSize="14"
+        Title="AddEditArtist" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="adminresources/bg2.jpg"/>
+    </Window.Background>
+    <Grid>
+        <ListView  HorizontalAlignment="Left" Height="348" Margin="64,33,0,0" VerticalAlignment="Top" Width="270" Name="lvArtist" SelectionChanged="lvArtist_SelectionChanged" FontWeight="Bold">
+            <ListView.View >
+                <GridView >
+                    <GridViewColumn Width="200" Header="Artist Name" DisplayMemberBinding="{Binding ArtistName}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label FontWeight="Bold" Background="Black" Foreground="White" Content="ID:" HorizontalAlignment="Left" Margin="475,90,0,0" VerticalAlignment="Top"/>
+        <Label FontWeight="Bold" Background="Black" Foreground="White" Name="lblArtistId" Content="-" HorizontalAlignment="Left" Margin="517,90,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Background="Black" Foreground="White" FontWeight="Bold" Content="Artist Name:" HorizontalAlignment="Left" Margin="411,134,0,0" VerticalAlignment="Top"/>
+        <TextBox FontWeight="Bold" Background="Black" Foreground="White" Name="tbArtistName" HorizontalAlignment="Left" Height="28" Margin="517,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" />
+        <Button FontWeight="Bold" Background="DarkCyan" Foreground="White" Click="btAddUpdateArtist_Click" Name="btAddUpdateArtist"  HorizontalAlignment="Left" Content="Add" Margin="411,187,0,0" VerticalAlignment="Top" Width="135"/>
+        <Button Click="btDeleteArtist_Click" IsEnabled="False" Name="btDeleteArtist" FontWeight="Bold" Background="DarkCyan" Foreground="White" Content="Delete" HorizontalAlignment="Left" Margin="576,187,0,0" VerticalAlignment="Top" Width="135"/>
+        <Button FontWeight="Bold" Background="DarkCyan" Foreground="White" IsCancel="True"  Content="Back" HorizontalAlignment="Left" Margin="493,228,0,0" VerticalAlignment="Top" Width="136"/>
+    </Grid>
+</Window>

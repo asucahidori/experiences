@@ -1,0 +1,39 @@
+﻿<Window x:Class="MMAdminVersion.AddEditAlbum"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MMAdminVersion" FontSize="14"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Title="AddEditAlbum" Height="550" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="adminresources/bg2.jpg"/>
+    </Window.Background>
+    <Grid>
+        <ListView HorizontalAlignment="Left" Height="477" Margin="10,19,0,0" VerticalAlignment="Top" Width="316" Name="lvAlbums" SelectionChanged="lvAlbums_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding AlbumName}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Foreground="White" Background="Black" Content="Album" HorizontalAlignment="Left" Margin="514,14,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Background="Black" Content="ID:" HorizontalAlignment="Left" Margin="479,53,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" Background="Black" Name="lblAlbumID" Content="-" HorizontalAlignment="Left" Margin="525,53,0,0" VerticalAlignment="Top" Width="49"/>
+        <Label Foreground="White" Background="Black" Content="Album Name:" HorizontalAlignment="Left" Margin="412,93,0,0" VerticalAlignment="Top"/>
+        <TextBox Foreground="White" Background="Black" Name="tbAlbumName" HorizontalAlignment="Left" Height="29" Margin="525,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="201"/>
+        <Label Foreground="White" Background="Black" Content="Album Price:" HorizontalAlignment="Left" Margin="419,139,0,0" VerticalAlignment="Top"/>
+        <TextBox Foreground="White" Background="Black" x:Name="tbAlbumPrice" HorizontalAlignment="Left" Height="29" Margin="525,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="201"/>
+        <Label Foreground="White" Background="Black" Content="Album Release Date:" HorizontalAlignment="Left" Margin="369,183,0,0" VerticalAlignment="Top"/>
+        <DatePicker FontWeight="Bold" Name="dpAlbumReleaseDate" HorizontalAlignment="Left" Margin="525,183,0,0" VerticalAlignment="Top" Width="201" Height="29" />
+        <Label Foreground="White" Background="Black" Content="Artist" HorizontalAlignment="Left" Margin="514,265,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="54"/>
+        <Button Foreground="White" FontWeight="Bold" Background="DarkCyan" Name="btArtistForAlbum" Click="btArtistForAlbum_Click" Content="Choose/Add Artist" HorizontalAlignment="Left" Margin="591,261,0,0" VerticalAlignment="Top" Width="135" Height="37"/>
+        <Label Foreground="White" Background="Black" Content="ID:" HorizontalAlignment="Left" Margin="479,343,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" Background="Black" Content="Name:" HorizontalAlignment="Left" Margin="456,392,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" Background="Black" Name="lblcurrAlbumArtistId" Content="-" HorizontalAlignment="Left" Margin="525,343,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label Foreground="White" Background="Black" Name="lblcurrAlbumArtistName" Content="-" HorizontalAlignment="Left" Margin="525,392,0,0" VerticalAlignment="Top" Width="201"/>
+        <Button Foreground="White" FontWeight="Bold" Background="DarkCyan" Click="btAddEditAlbum_Click" Name="btAddEditAlbum" Content="Add" HorizontalAlignment="Left" Margin="633,450,0,0" VerticalAlignment="Top" Width="109" Height="41"/>
+        <Button Foreground="White" FontWeight="Bold" Background="DarkCyan" IsCancel="True" Content="Back" HorizontalAlignment="Left" Margin="369,450,0,0" VerticalAlignment="Top" Width="109" Height="41"/>
+        <Button Click="btDelete_Click" IsEnabled="False" Name="btDelete" Foreground="White" FontWeight="Bold" Background="DarkCyan" Content="Delete" HorizontalAlignment="Left" Margin="500,450,0,0" VerticalAlignment="Top" Width="109" Height="41"/>
+    </Grid>
+</Window>

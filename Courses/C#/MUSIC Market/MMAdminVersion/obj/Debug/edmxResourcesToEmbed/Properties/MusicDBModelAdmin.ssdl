@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MusicDB2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AlbumCovers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlbumCover" Type="varbinary(max)" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Albums">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlbumPrice" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="AlbumName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="ReleaseDate" Type="datetime" Nullable="false" />
+    <Property Name="ArtistId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Artists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArtistName" Type="nvarchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerAlbums">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="AlbumId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerSongs">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="SongId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="SongId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ListeningRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateOf" Type="datetime" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="SongId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentInfos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardholderName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="ZipCode" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="ExpirationDate" Type="datetime" Nullable="false" />
+    <Property Name="CardNumber" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SongData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SongBytes" Type="varbinary(max)" Nullable="false" />
+    <Property Name="SongId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Songs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SongPrice" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="SongName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="Genre" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ArtistId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" />
+  </EntityType>
+  <EntityType Name="TransactionAlbums">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+      <PropertyRef Name="AlbumId" />
+    </Key>
+    <Property Name="TransactionId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="PaymentInfoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransactionSongs">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+      <PropertyRef Name="SongId" />
+    </Key>
+    <Property Name="TransactionId" Type="int" Nullable="false" />
+    <Property Name="SongId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_Albums_Artists">
+    <End Role="Artists" Type="Self.Artists" Multiplicity="1" />
+    <End Role="Albums" Type="Self.Albums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artists">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Albums">
+        <PropertyRef Name="ArtistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CustomerAlbums_Albums">
+    <End Role="Albums" Type="Self.Albums" Multiplicity="1" />
+    <End Role="CustomerAlbums" Type="Self.CustomerAlbums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Albums">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerAlbums">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CustomerAlbums_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="CustomerAlbums" Type="Self.CustomerAlbums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerAlbums">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CustomerSongs_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="CustomerSongs" Type="Self.CustomerSongs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerSongs">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CustomerSongs_Songs">
+    <End Role="Songs" Type="Self.Songs" Multiplicity="1" />
+    <End Role="CustomerSongs" Type="Self.CustomerSongs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Songs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerSongs">
+        <PropertyRef Name="SongId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ListeningRecords_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="ListeningRecords" Type="Self.ListeningRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ListeningRecords">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ListeningRecords_Songs">
+    <End Role="Songs" Type="Self.Songs" Multiplicity="1" />
+    <End Role="ListeningRecords" Type="Self.ListeningRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Songs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ListeningRecords">
+        <PropertyRef Name="SongId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PaymentInfos_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="PaymentInfos" Type="Self.PaymentInfos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PaymentInfos">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Songs_Albums">
+    <End Role="Albums" Type="Self.Albums" Multiplicity="0..1" />
+    <End Role="Songs" Type="Self.Songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Albums">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Songs">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Songs_Artists">
+    <End Role="Artists" Type="Self.Artists" Multiplicity="1" />
+    <End Role="Songs" Type="Self.Songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artists">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Songs">
+        <PropertyRef Name="ArtistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TransactionAlbums_Albums">
+    <End Role="Albums" Type="Self.Albums" Multiplicity="1" />
+    <End Role="TransactionAlbums" Type="Self.TransactionAlbums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Albums">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransactionAlbums">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TransactionAlbums_Transactions">
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="1" />
+    <End Role="TransactionAlbums" Type="Self.TransactionAlbums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transactions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransactionAlbums">
+        <PropertyRef Name="TransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Transactions_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Transactions_PaymentInfos">
+    <End Role="PaymentInfos" Type="Self.PaymentInfos" Multiplicity="1" />
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentInfos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="PaymentInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TransactionSongs_Songs">
+    <End Role="Songs" Type="Self.Songs" Multiplicity="1" />
+    <End Role="TransactionSongs" Type="Self.TransactionSongs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Songs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransactionSongs">
+        <PropertyRef Name="SongId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TransactionSongs_Transactions">
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="1" />
+    <End Role="TransactionSongs" Type="Self.TransactionSongs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transactions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TransactionSongs">
+        <PropertyRef Name="TransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Users_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MusicDB2ModelStoreContainer">
+    <EntitySet Name="AlbumCovers" EntityType="Self.AlbumCovers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Albums" EntityType="Self.Albums" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Artists" EntityType="Self.Artists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerAlbums" EntityType="Self.CustomerAlbums" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerSongs" EntityType="Self.CustomerSongs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListeningRecords" EntityType="Self.ListeningRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentInfos" EntityType="Self.PaymentInfos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SongData" EntityType="Self.SongData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Songs" EntityType="Self.Songs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionAlbums" EntityType="Self.TransactionAlbums" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionSongs" EntityType="Self.TransactionSongs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_Albums_Artists" Association="Self.fk_Albums_Artists">
+      <End Role="Artists" EntitySet="Artists" />
+      <End Role="Albums" EntitySet="Albums" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CustomerAlbums_Albums" Association="Self.fk_CustomerAlbums_Albums">
+      <End Role="Albums" EntitySet="Albums" />
+      <End Role="CustomerAlbums" EntitySet="CustomerAlbums" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CustomerAlbums_Customers" Association="Self.fk_CustomerAlbums_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CustomerAlbums" EntitySet="CustomerAlbums" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CustomerSongs_Customers" Association="Self.fk_CustomerSongs_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CustomerSongs" EntitySet="CustomerSongs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CustomerSongs_Songs" Association="Self.fk_CustomerSongs_Songs">
+      <End Role="Songs" EntitySet="Songs" />
+      <End Role="CustomerSongs" EntitySet="CustomerSongs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ListeningRecords_Customers" Association="Self.fk_ListeningRecords_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="ListeningRecords" EntitySet="ListeningRecords" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ListeningRecords_Songs" Association="Self.fk_ListeningRecords_Songs">
+      <End Role="Songs" EntitySet="Songs" />
+      <End Role="ListeningRecords" EntitySet="ListeningRecords" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PaymentInfos_Customers" Association="Self.fk_PaymentInfos_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="PaymentInfos" EntitySet="PaymentInfos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Songs_Albums" Association="Self.fk_Songs_Albums">
+      <End Role="Albums" EntitySet="Albums" />
+      <End Role="Songs" EntitySet="Songs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Songs_Artists" Association="Self.fk_Songs_Artists">
+      <End Role="Artists" EntitySet="Artists" />
+      <End Role="Songs" EntitySet="Songs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TransactionAlbums_Albums" Association="Self.fk_TransactionAlbums_Albums">
+      <End Role="Albums" EntitySet="Albums" />
+      <End Role="TransactionAlbums" EntitySet="TransactionAlbums" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TransactionAlbums_Transactions" Association="Self.fk_TransactionAlbums_Transactions">
+      <End Role="Transactions" EntitySet="Transactions" />
+      <End Role="TransactionAlbums" EntitySet="TransactionAlbums" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Transactions_Customers" Association="Self.fk_Transactions_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Transactions_PaymentInfos" Association="Self.fk_Transactions_PaymentInfos">
+      <End Role="PaymentInfos" EntitySet="PaymentInfos" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TransactionSongs_Songs" Association="Self.fk_TransactionSongs_Songs">
+      <End Role="Songs" EntitySet="Songs" />
+      <End Role="TransactionSongs" EntitySet="TransactionSongs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TransactionSongs_Transactions" Association="Self.fk_TransactionSongs_Transactions">
+      <End Role="Transactions" EntitySet="Transactions" />
+      <End Role="TransactionSongs" EntitySet="TransactionSongs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Users_Customers" Association="Self.fk_Users_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

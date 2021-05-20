@@ -1,0 +1,58 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:mvc="http://www.springframework.org/schema/mvc"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans    
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd    
+                        http://www.springframework.org/schema/context    
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd    
+                        http://www.springframework.org/schema/mvc    
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+ <!-- controller -->
+ <context:component-scan base-package="com.vita.controller" />
+
+ <!-- View definition -->
+ <bean id="viewResolver"
+     class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+     <!-- url definition-->
+     <property name="prefix" value="/WEB-INF/jsp/" />
+     <property name="suffix" value=".jsp" />
+ </bean>
+
+ <!--avoid to download the ajax file -->
+ <bean id="mappingJacksonHttpMessageConverter"
+     class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+     <property name="supportedMediaTypes">
+         <list>
+             <value>text/html;charset=UTF-8</value>
+         </list>
+     </property>
+ </bean>
+ <!-- start the spring function to mapping the pojo -->
+ <bean
+     class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+     <property name="messageConverters">
+         <list>
+             <ref bean="mappingJacksonHttpMessageConverter" /> <!-- JSON Convert -->
+         </list>
+     </property>
+ </bean>
+ <!-- View design model -->
+ <bean
+     class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+     <property name="prefix" value="/WEB-INF/jsp/" />
+     <property name="suffix" value=".jsp" />
+ </bean>
+ 
+ <bean id="multipartResolver"
+     class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+     <!-- code -->
+     <property name="defaultEncoding" value="utf-8" />
+     <!-- file size -->
+     <property name="maxUploadSize" value="10485760000" />
+     <!-- memory size -->
+     <property name="maxInMemorySize" value="40960" />
+ </bean>
+
+</beans>

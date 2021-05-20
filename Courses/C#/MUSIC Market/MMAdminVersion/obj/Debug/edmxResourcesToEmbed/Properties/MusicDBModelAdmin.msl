@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MusicDB2ModelStoreContainer" CdmEntityContainer="MusicDB2Entities1">
+    <EntitySetMapping Name="AlbumCovers">
+      <EntityTypeMapping TypeName="MusicDB2Model.AlbumCover">
+        <MappingFragment StoreEntitySet="AlbumCovers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AlbumCover1" ColumnName="AlbumCover" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="MusicDB2Model.Album">
+        <MappingFragment StoreEntitySet="Albums">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AlbumPrice" ColumnName="AlbumPrice" />
+          <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="ArtistId" ColumnName="ArtistId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Artists">
+      <EntityTypeMapping TypeName="MusicDB2Model.Artist">
+        <MappingFragment StoreEntitySet="Artists">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="MusicDB2Model.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListeningRecords">
+      <EntityTypeMapping TypeName="MusicDB2Model.ListeningRecord">
+        <MappingFragment StoreEntitySet="ListeningRecords">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateOf" ColumnName="DateOf" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="SongId" ColumnName="SongId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentInfos">
+      <EntityTypeMapping TypeName="MusicDB2Model.PaymentInfo">
+        <MappingFragment StoreEntitySet="PaymentInfos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardholderName" ColumnName="CardholderName" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SongDatas">
+      <EntityTypeMapping TypeName="MusicDB2Model.SongData">
+        <MappingFragment StoreEntitySet="SongData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SongBytes" ColumnName="SongBytes" />
+          <ScalarProperty Name="SongId" ColumnName="SongId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Songs">
+      <EntityTypeMapping TypeName="MusicDB2Model.Song">
+        <MappingFragment StoreEntitySet="Songs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SongPrice" ColumnName="SongPrice" />
+          <ScalarProperty Name="SongName" ColumnName="SongName" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="ArtistId" ColumnName="ArtistId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="MusicDB2Model.Transaction">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="PaymentInfoId" ColumnName="PaymentInfoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MusicDB2Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CustomerAlbums" TypeName="MusicDB2Model.CustomerAlbums" StoreEntitySet="CustomerAlbums">
+      <EndProperty Name="Albums">
+        <ScalarProperty Name="Id" ColumnName="AlbumId" />
+      </EndProperty>
+      <EndProperty Name="Customers">
+        <ScalarProperty Name="Id" ColumnName="CustomerId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomerSongs" TypeName="MusicDB2Model.CustomerSongs" StoreEntitySet="CustomerSongs">
+      <EndProperty Name="Customers">
+        <ScalarProperty Name="Id" ColumnName="CustomerId" />
+      </EndProperty>
+      <EndProperty Name="Songs">
+        <ScalarProperty Name="Id" ColumnName="SongId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TransactionAlbums" TypeName="MusicDB2Model.TransactionAlbums" StoreEntitySet="TransactionAlbums">
+      <EndProperty Name="Albums">
+        <ScalarProperty Name="Id" ColumnName="AlbumId" />
+      </EndProperty>
+      <EndProperty Name="Transactions">
+        <ScalarProperty Name="Id" ColumnName="TransactionId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TransactionSongs" TypeName="MusicDB2Model.TransactionSongs" StoreEntitySet="TransactionSongs">
+      <EndProperty Name="Songs">
+        <ScalarProperty Name="Id" ColumnName="SongId" />
+      </EndProperty>
+      <EndProperty Name="Transactions">
+        <ScalarProperty Name="Id" ColumnName="TransactionId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

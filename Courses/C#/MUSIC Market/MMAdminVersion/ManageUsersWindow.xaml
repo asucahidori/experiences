@@ -1,0 +1,84 @@
+﻿<Window x:Class="MMAdminVersion.ManageUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MMAdminVersion"
+        mc:Ignorable="d" FontSize="14" WindowStartupLocation="CenterOwner"
+        Title="ManageUsersWindow" Height="800" Width="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="adminresources/bg10.jpg"/>
+    </Window.Background>
+    <!-- LEFT LISTVIEW ////////////////////////////////////////////// -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListView SelectionChanged="lvUsers_SelectionChanged" Name="lvUsers" HorizontalAlignment="Center" Height="324" Margin="30,46,34,15" VerticalAlignment="Center" Width="384" Grid.Column="0" Grid.Row="0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Customer.CustomerName}"/>
+                    <GridViewColumn Header="User Account" DisplayMemberBinding="{Binding UserName}"/>
+                    <GridViewColumn Header="Password" DisplayMemberBinding="{Binding UserPassword}"/>
+                    <GridViewColumn Header="Enabled" DisplayMemberBinding="{Binding Valid}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!-- RIGHT LISTVIEW ////////////////////////////////////////////// -->
+        <ListView Name="lvInfoDisplay" HorizontalAlignment="Center" Height="324"  VerticalAlignment="Center" Width="397" Grid.Column="2" Grid.Row="0" Margin="27,46,24,15">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Available Information" Width="350"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!-- LISTVIEW BUTTONS ////////////////////////////////////////////// -->
+        <Button FontWeight="Bold" Background="DarkCyan" Click="btDisplayToggle_Click"  Name="btListeningHist" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Height="40" IsEnabled="False" Grid.Column="1" Margin="0,72,0,0" Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="Listening" HorizontalAlignment="Center"/>
+                <TextBlock Text="Records" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button FontWeight="Bold" Background="DarkCyan" Click="btDisplayToggle_Click" Name="btTransacHist" HorizontalAlignment="Left" Margin="0,166,0,0" VerticalAlignment="Top" Width="86" Height="40" IsEnabled="False" Grid.Column="1" Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="Transaction" HorizontalAlignment="Center"/>
+                <TextBlock Text="History" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button FontWeight="Bold" Background="DarkCyan" Click="btDisplayToggle_Click" Name="btUserSongs" HorizontalAlignment="Left" Margin="0,264,0,0" VerticalAlignment="Top" Width="86" Height="40" IsEnabled="False" Grid.Column="1" Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="Songs" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <!-- USERS INFO LABLES ////////////////////////////////////////////// -->
+        <Label Background="Black" Foreground="White" Content="Most Listened to Song" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="10,11,0,0"/>
+        <Label Background="Black" Foreground="White" Content="This User:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="10,51,0,0"/>
+        <Label Background="Black" Foreground="White" Content="All Users:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="231,51,0,0"/>
+        <Label Background="Black" Foreground="White" Name="lblMostSongUser"  Content="-" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="210" Grid.Column="2" Grid.Row="1" Margin="10,91,0,0"/>
+        <Label Background="Black" Foreground="White" Name="lblMostSongAll" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="210" Grid.Column="2" Grid.Row="1" Margin="231,91,0,0"/>
+        <Label Background="Black" Foreground="White" Content="Most Listened to Artist" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="10,133,0,0"/>
+        <Label Background="Black" Foreground="White" Content="This User:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="10,176,0,0"/>
+        <Label Background="Black" Foreground="White" Content="All Users:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="231,176,0,0"/>
+        <Label Background="Black" Foreground="White" x:Name="lblMostArtUser"  Content="-" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="210" Grid.Column="2" Grid.Row="1" Margin="10,216,0,0"/>
+        <Label Background="Black" Foreground="White" x:Name="lblMostArtAll" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="210" Grid.Column="2" Grid.Row="1" Margin="231,216,0,0"/>
+        <Label Background="Black" Foreground="White" Content="Total Transaction amount" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="10,264,0,0"/>
+        <Label Background="Black" Foreground="White" Content="This User:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="10,289,0,0"/>
+        <Label Background="Black" Foreground="White" Content="All Users:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="231,289,0,0"/>
+        <Label Background="Black" Foreground="White" x:Name="lblTotalSalesUser"  Content="-" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="210" Grid.Column="2" Grid.Row="1" Margin="10,323,0,0"/>
+        <Label Background="Black" Foreground="White" x:Name="lblTotalSalesAll" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="210" Grid.Column="2" Grid.Row="1" Margin="231,323,0,0"/>
+        <!-- USER ACTIONS /////////////////////////////////////// -->
+        <Label Background="Black" Foreground="White" Content="Reset Password:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" Margin="52,82,0,0"/>
+        <TextBox Background="Black" Foreground="White" Name="tbPassowrd" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237" Grid.Column="0" Grid.Row="1" Margin="165,86,0,0"/>
+        <Label Background="Black" Foreground="White" Content="Current Status:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" Margin="59,133,0,0"/>
+        <Button FontWeight="Bold" Click="btAccountStauts_Click" Name="btAccountStauts" IsEnabled="False" Content="Account Enabled" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="137" Background="LightSalmon" Grid.Column="0" Grid.Row="1" Margin="212,133,0,0" Height="29"/>
+        <Button FontWeight="Bold" Click="btDeleteUser_Click" Name="btDeleteUser" Content="Delete User" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" IsEnabled="False" Grid.Column="0" Grid.Row="1" Margin="212,185,0,0" Height="29"/>
+        <Button FontWeight="Bold" Click="btSaveChanges_Click" Name="btSaveChanges" IsEnabled="False" Content="Save Changes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" Grid.Column="0" Grid.Row="1" Margin="212,235,0,0" Height="29"/>
+        <Button FontWeight="Bold" Background="DarkCyan" IsCancel="True" Content="Back" HorizontalAlignment="Left" Margin="212,289,0,0" Grid.Row="1" VerticalAlignment="Top" Width="137" Height="29"/>
+    </Grid>
+</Window>

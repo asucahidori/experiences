@@ -1,0 +1,154 @@
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.exe.config
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.exe
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csprojAssemblyReference.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MainWindow.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\AddUpdateSongDlg.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MainWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\App.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion_MarkupCompile.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion_MarkupCompile.lref
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\AddUpdateSongDlg.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.g.resources
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.Properties.Resources.resources
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.GenerateResource.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.CoreCompileInputs.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.CopyComplete
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.exe
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\AddEditArtist.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\AddEditArtist.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\AddEditAlbum.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\AddEditAlbum.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.exe.config
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.exe
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.xml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csprojAssemblyReference.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MainWindow.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditAlbum.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditArtist.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddUpdateSongDlg.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MainWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\App.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion_MarkupCompile.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion_MarkupCompile.lref
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditAlbum.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditArtist.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddUpdateSongDlg.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.g.resources
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.Properties.Resources.resources
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.GenerateResource.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.CoreCompileInputs.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.CopyComplete
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.exe
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\ManageUsersWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMAdminVersion\obj\Debug\ManageUsersWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csprojAssemblyReference.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MainWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditAlbum.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditArtist.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddUpdateSongDlg.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MainWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\ManageUsersWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\App.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion_MarkupCompile.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion_MarkupCompile.lref
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.exe.config
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.exe
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMAdminVersion.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditAlbum.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddEditArtist.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\AddUpdateSongDlg.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\ManageUsersWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.g.resources
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.Properties.Resources.resources
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.GenerateResource.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.CoreCompileInputs.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.csproj.CopyComplete
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMAdminVersion\obj\Debug\MMAdminVersion.exe

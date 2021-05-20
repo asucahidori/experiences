@@ -1,0 +1,252 @@
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csprojAssemblyReference.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MainWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\App.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.lref
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe.config
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MainWindow.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.g.resources
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.Properties.Resources.resources
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.GenerateResource.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CoreCompileInputs.cache
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CopyComplete
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.exe
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.csprojAssemblyReference.cache
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MainWindow.g.cs
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\UsersMainWindow.g.cs
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\WizardWindow.g.cs
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\App.g.cs
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.cache
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.lref
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe.config
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MMCustomerVersion.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\EntityFramework.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MaterialDesignColors.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MMLibrary.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MMLibrary.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\EntityFramework.xml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MaterialDesignColors.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\App.baml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MainWindow.baml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\UsersMainWindow.baml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\WizardWindow.baml
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.g.resources
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.Properties.Resources.resources
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.GenerateResource.cache
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CoreCompileInputs.cache
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CopyComplete
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MMCustomerVersion.exe
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MediaPlayerWindow.g.cs
+C:\Users\faruk\Documents\2021-ipd24-NET\repos\MMCustomerVersion\obj\Debug\MediaPlayerWindow.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignColors.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignColors.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MediaPlayerWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\UsersMainWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\WizardWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\App.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\MediaPlayerWindow.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\UsersMainWindow.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\WizardWindow.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csprojAssemblyReference.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MainWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MediaPlayerWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\UsersMainWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\WizardWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\App.g.cs
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.lref
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe.config
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignColors.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.xml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\App.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MainWindow.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MediaPlayerWindow.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\UsersMainWindow.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\WizardWindow.baml
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.g.resources
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.Properties.Resources.resources
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.GenerateResource.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CoreCompileInputs.cache
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CopyComplete
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.exe
+C:\Users\Diego Marco\Desktop\Class\Class11_ProgrammingFundamentals\Class11_Project\Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe.config
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.exe
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMCustomerVersion.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignColors.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Stripe.net.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MMLibrary.dll.config
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Stripe.net.pdb
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\Stripe.net.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csprojAssemblyReference.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MainWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MediaPlayerWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\UsersMainWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\WizardWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\App.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion_MarkupCompile.lref
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\App.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MainWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MediaPlayerWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\UsersMainWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\WizardWindow.baml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.g.resources
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.Properties.Resources.resources
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.GenerateResource.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CoreCompileInputs.cache
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.csproj.CopyComplete
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.exe
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\MMCustomerVersion.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Stripe.net.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Stripe.net.pdb
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\Stripe.net.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\bin\Debug\System.Drawing.Common.dll
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\LoginWindow.g.cs
+C:\Users\Diego Marco\Desktop\Class11_Group_Deposit\MusicMarket\MMCustomerVersion\obj\Debug\LoginWindow.baml
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\bin\Debug\System.Drawing.Common.dll
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\LoginWindow.g.cs
+C:\Users\john\Documents\changed-music-market\MusicMarket\MMCustomerVersion\obj\Debug\LoginWindow.baml
