@@ -1,0 +1,66 @@
+****** ***************************** Top of Data ******************************
+=COLS> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7--
+000100          PRINT NOGEN                                                    
+000200 TMAPSET DFHMSD TYPE=&SYSPARM,                                          X
+000300                LANG=COBOL,                                             X
+000400                MODE=INOUT,                                             X
+000500                TERM=3270-2,                                            X
+000600                CTRL=FREEKB,                                            X
+000700                STORAGE=AUTO,                                           X
+000800                TIOAPFX=YES                                              
+000900 TMAP01  DFHMDI SIZE=(24,80),                                           X
+001000                LINE=1,                                                 X
+001100                COLUMN=1,                                               X
+001200                MAPATTS=COLOR                                            
+001300         DFHMDF POS=(1,1),                                              X
+001400                LENGTH=9,                                               X
+001500                ATTRB=(NORM,PROT),                                      X
+001600                COLOR=BLUE,                                             X
+001700                INITIAL='ABCD TXID'                                     X
+001800         DFHMDF POS=(1,26),                                             X
+001900                LENGTH=28,                                              X
+002000                ATTRB=(NORM,PROT),                                      X
+002100                COLOR=GREEN,                                            X
+002200                INITIAL='AVERAGE SALARY BY DEPARTMENT'                   
+002300         DFHMDF POS=(9,1),                                              X
+002400                LENGTH=41,                                              X
+002500                ATTRB=(NORM,PROT),                                      X
+002700                INITIAL='TYPE AS DEPARTMENT NUMBER AND PRESS ENTER.'     
+002800         DFHMDF POS=(11,1),                                             X
+002900                LENGTH=18,                                              X
+003000                ATTRB=(NORM,PROT),                                      X
+003100                COLOR=GREEN,                                            X
+003200                INITIAL='DEPARTMENT NUMBER:'                             
+003300 DPTONO  DFHMDF POS=(11,20),                                            X
+003400                LENGTH=3,                                               X
+003500                ATTRB=(NORM,UNPROT,IC),                                 X
+003600                COLOR=TURQUOISE,                                         
+003610                INITIAL='____'                                           
+003700         DFHMDF POS=(11,24),                                            X
+003800                LENGTH=1,                                               X
+003900                ATTRB=ASKIP                                              
+004200         DFHMDF POS=(13,1),                                             X
+004300                LENGTH=18,                                              X
+004400                ATTRB=(NORM,PROT),                                      X
+004500                COLOR=GREEN,                                            X
+004600                INITIAL='AVERAGE SALARY($):'                             
+004700 AVGSAL  DFHMDF POS=(13,20),                                            X
+004800                LENGTH=11,                                              X
+004900                ATTRB=(NORM,PROT),                                      X
+005000                COLOR=TURQUOISE                                          
+005100 MSGLINE DFHMDF POS=(23,1),                                             X
+005200                LENGTH=78,                                              X
+005300                ATTRB=(BRT,PROT),                                       X
+005400                COLOR=BLUE                                               
+005500         DFHMDF POS=(23,79),                                            X
+005600                LENGTH=1,                                               X
+005700                ATTRB=(DRT,PROT,FSET),                                  X
+005800                INITIAL=' '                                              
+005900         DFHMDF POS=(24,1),                                             X
+006000                LENGTH=7,                                               X
+006100                ATTRB=(NORM,PROT),                                      X
+006200                COLOR=RED,                                              X
+006210                INITIAL='F3=EXIT'                                        
+006300         DFHMDF TYPE=FINAL                                               
+006310         END                                                             
+****** **************************** Bottom of Data ****************************
