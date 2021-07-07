@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TSumOrdFamilyMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TSumOrdFamily" >
+    <id column="date" property="date" jdbcType="DATE" />
+    <id column="house_id" property="houseId" jdbcType="BIGINT" />
+    <result column="order_number" property="orderNumber" jdbcType="BIGINT" />
+    <result column="trading_price" property="tradingPrice" jdbcType="DOUBLE" />
+    <result column="freight" property="freight" jdbcType="DOUBLE" />
+    <result column="payable_price" property="payablePrice" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    date, house_id, order_number, trading_price, freight, payable_price, status, version, 
+    create_user, create_time, update_user, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamilyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_sum_ord_family
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamilyKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sum_ord_family
+    where date = #{date,jdbcType=DATE}
+      and house_id = #{houseId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamilyKey" >
+    delete from t_sum_ord_family
+    where date = #{date,jdbcType=DATE}
+      and house_id = #{houseId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamilyExample" >
+    delete from t_sum_ord_family
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamily" >
+    insert into t_sum_ord_family (date, house_id, order_number, 
+      trading_price, freight, payable_price, 
+      status, version, create_user, 
+      create_time, update_user, update_time
+      )
+    values (#{date,jdbcType=DATE}, #{houseId,jdbcType=BIGINT}, #{orderNumber,jdbcType=BIGINT}, 
+      #{tradingPrice,jdbcType=DOUBLE}, #{freight,jdbcType=DOUBLE}, #{payablePrice,jdbcType=DOUBLE}, 
+      #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, #{createUser,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamily" >
+    insert into t_sum_ord_family
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="houseId != null" >
+        house_id,
+      </if>
+      <if test="orderNumber != null" >
+        order_number,
+      </if>
+      <if test="tradingPrice != null" >
+        trading_price,
+      </if>
+      <if test="freight != null" >
+        freight,
+      </if>
+      <if test="payablePrice != null" >
+        payable_price,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="date != null" >
+        #{date,jdbcType=DATE},
+      </if>
+      <if test="houseId != null" >
+        #{houseId,jdbcType=BIGINT},
+      </if>
+      <if test="orderNumber != null" >
+        #{orderNumber,jdbcType=BIGINT},
+      </if>
+      <if test="tradingPrice != null" >
+        #{tradingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="freight != null" >
+        #{freight,jdbcType=DOUBLE},
+      </if>
+      <if test="payablePrice != null" >
+        #{payablePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamilyExample" resultType="java.lang.Integer" >
+    select count(*) from t_sum_ord_family
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_sum_ord_family
+    <set >
+      <if test="record.date != null" >
+        date = #{record.date,jdbcType=DATE},
+      </if>
+      <if test="record.houseId != null" >
+        house_id = #{record.houseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.orderNumber != null" >
+        order_number = #{record.orderNumber,jdbcType=BIGINT},
+      </if>
+      <if test="record.tradingPrice != null" >
+        trading_price = #{record.tradingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.freight != null" >
+        freight = #{record.freight,jdbcType=DOUBLE},
+      </if>
+      <if test="record.payablePrice != null" >
+        payable_price = #{record.payablePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_sum_ord_family
+    set date = #{record.date,jdbcType=DATE},
+      house_id = #{record.houseId,jdbcType=BIGINT},
+      order_number = #{record.orderNumber,jdbcType=BIGINT},
+      trading_price = #{record.tradingPrice,jdbcType=DOUBLE},
+      freight = #{record.freight,jdbcType=DOUBLE},
+      payable_price = #{record.payablePrice,jdbcType=DOUBLE},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamily" >
+    update t_sum_ord_family
+    <set >
+      <if test="orderNumber != null" >
+        order_number = #{orderNumber,jdbcType=BIGINT},
+      </if>
+      <if test="tradingPrice != null" >
+        trading_price = #{tradingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="freight != null" >
+        freight = #{freight,jdbcType=DOUBLE},
+      </if>
+      <if test="payablePrice != null" >
+        payable_price = #{payablePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where date = #{date,jdbcType=DATE}
+      and house_id = #{houseId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamily" >
+    update t_sum_ord_family
+    set order_number = #{orderNumber,jdbcType=BIGINT},
+      trading_price = #{tradingPrice,jdbcType=DOUBLE},
+      freight = #{freight,jdbcType=DOUBLE},
+      payable_price = #{payablePrice,jdbcType=DOUBLE},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where date = #{date,jdbcType=DATE}
+      and house_id = #{houseId,jdbcType=BIGINT}
+  </update>
+  <select id="searchSumOrdFamily" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrdFamily" resultType="java.util.HashMap">
+  SELECT 
+  IFNULL(sum(order_number),0)  AS orderNumber,IFNULL(sum(trading_price),0) AS tradingPrice
+   from t_sum_ord_family 
+   where 
+   house_id = #{houseId,jdbcType=BIGINT}
+   and status=0
+   and
+   date(`date`) >= date_sub(curdate(), INTERVAL 30 DAY) 
+  </select>
+</mapper>

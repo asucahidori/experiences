@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TTownMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TTown" >
+    <id column="town_id" property="townId" jdbcType="BIGINT" />
+    <result column="gb_code" property="gbCode" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="county_id" property="countyId" jdbcType="BIGINT" />
+    <result column="square_area" property="squareArea" jdbcType="INTEGER" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="household_number" property="householdNumber" jdbcType="INTEGER" />
+    <result column="resident_population_number" property="residentPopulationNumber" jdbcType="INTEGER" />
+    <result column="baidu_coordinate_x" property="baiduCoordinateX" jdbcType="DOUBLE" />
+    <result column="baidu_coordinate_y" property="baiduCoordinateY" jdbcType="DOUBLE" />
+    <result column="gaode_coordinate_lat" property="gaodeCoordinateLat" jdbcType="DOUBLE" />
+    <result column="gaode_coordinate_lng" property="gaodeCoordinateLng" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="BIGINT" />
+    <result column="update_user_id" property="updateUserId" jdbcType="BIGINT" />
+    <result column="batch" property="batch" jdbcType="BIT" />
+  </resultMap>
+  
+    <!-- 街道等地图的显示记录 -->
+  <resultMap id="AreaMapVoMap" type="com.gatz.discovery.modules.cidm.model.AreaMapVo" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="gaodeLat" property="gaodeLat" jdbcType="REAL" />
+    <result column="gaodeLng" property="gaodeLng" jdbcType="REAL" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="area_Name" property="areaName" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    town_id, gb_code, name, county_id, square_area, introduction, household_number, resident_population_number, 
+    baidu_coordinate_x, baidu_coordinate_y, gaode_coordinate_lat, gaode_coordinate_lng, 
+    status, version, create_user, create_time, update_user, update_time, create_user_id, 
+    update_user_id, batch
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TTownExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_town
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_town
+    where town_id = #{townId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_town
+    where town_id = #{townId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TTownExample" >
+    delete from t_town
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TTown" >
+    insert into t_town (town_id, gb_code, name, 
+      county_id, square_area, introduction, 
+      household_number, resident_population_number, 
+      baidu_coordinate_x, baidu_coordinate_y, gaode_coordinate_lat, 
+      gaode_coordinate_lng, status, version, 
+      create_user, create_time, update_user, 
+      update_time, create_user_id, update_user_id, 
+      batch)
+    values (#{townId,jdbcType=BIGINT}, #{gbCode,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{countyId,jdbcType=BIGINT}, #{squareArea,jdbcType=INTEGER}, #{introduction,jdbcType=VARCHAR}, 
+      #{householdNumber,jdbcType=INTEGER}, #{residentPopulationNumber,jdbcType=INTEGER}, 
+      #{baiduCoordinateX,jdbcType=DOUBLE}, #{baiduCoordinateY,jdbcType=DOUBLE}, #{gaodeCoordinateLat,jdbcType=DOUBLE}, 
+      #{gaodeCoordinateLng,jdbcType=DOUBLE}, #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, 
+      #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{createUserId,jdbcType=BIGINT}, #{updateUserId,jdbcType=BIGINT}, 
+      #{batch,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TTown" >
+    insert into t_town
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="townId != null" >
+        town_id,
+      </if>
+      <if test="gbCode != null" >
+        gb_code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="countyId != null" >
+        county_id,
+      </if>
+      <if test="squareArea != null" >
+        square_area,
+      </if>
+      <if test="introduction != null" >
+        introduction,
+      </if>
+      <if test="householdNumber != null" >
+        household_number,
+      </if>
+      <if test="residentPopulationNumber != null" >
+        resident_population_number,
+      </if>
+      <if test="baiduCoordinateX != null" >
+        baidu_coordinate_x,
+      </if>
+      <if test="baiduCoordinateY != null" >
+        baidu_coordinate_y,
+      </if>
+      <if test="gaodeCoordinateLat != null" >
+        gaode_coordinate_lat,
+      </if>
+      <if test="gaodeCoordinateLng != null" >
+        gaode_coordinate_lng,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="createUserId != null" >
+        create_user_id,
+      </if>
+      <if test="updateUserId != null" >
+        update_user_id,
+      </if>
+      <if test="batch != null" >
+        batch,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="townId != null" >
+        #{townId,jdbcType=BIGINT},
+      </if>
+      <if test="gbCode != null" >
+        #{gbCode,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="countyId != null" >
+        #{countyId,jdbcType=BIGINT},
+      </if>
+      <if test="squareArea != null" >
+        #{squareArea,jdbcType=INTEGER},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="householdNumber != null" >
+        #{householdNumber,jdbcType=INTEGER},
+      </if>
+      <if test="residentPopulationNumber != null" >
+        #{residentPopulationNumber,jdbcType=INTEGER},
+      </if>
+      <if test="baiduCoordinateX != null" >
+        #{baiduCoordinateX,jdbcType=DOUBLE},
+      </if>
+      <if test="baiduCoordinateY != null" >
+        #{baiduCoordinateY,jdbcType=DOUBLE},
+      </if>
+      <if test="gaodeCoordinateLat != null" >
+        #{gaodeCoordinateLat,jdbcType=DOUBLE},
+      </if>
+      <if test="gaodeCoordinateLng != null" >
+        #{gaodeCoordinateLng,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null" >
+        #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="batch != null" >
+        #{batch,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TTownExample" resultType="java.lang.Integer" >
+    select count(*) from t_town
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_town
+    <set >
+      <if test="record.townId != null" >
+        town_id = #{record.townId,jdbcType=BIGINT},
+      </if>
+      <if test="record.gbCode != null" >
+        gb_code = #{record.gbCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.countyId != null" >
+        county_id = #{record.countyId,jdbcType=BIGINT},
+      </if>
+      <if test="record.squareArea != null" >
+        square_area = #{record.squareArea,jdbcType=INTEGER},
+      </if>
+      <if test="record.introduction != null" >
+        introduction = #{record.introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.householdNumber != null" >
+        household_number = #{record.householdNumber,jdbcType=INTEGER},
+      </if>
+      <if test="record.residentPopulationNumber != null" >
+        resident_population_number = #{record.residentPopulationNumber,jdbcType=INTEGER},
+      </if>
+      <if test="record.baiduCoordinateX != null" >
+        baidu_coordinate_x = #{record.baiduCoordinateX,jdbcType=DOUBLE},
+      </if>
+      <if test="record.baiduCoordinateY != null" >
+        baidu_coordinate_y = #{record.baiduCoordinateY,jdbcType=DOUBLE},
+      </if>
+      <if test="record.gaodeCoordinateLat != null" >
+        gaode_coordinate_lat = #{record.gaodeCoordinateLat,jdbcType=DOUBLE},
+      </if>
+      <if test="record.gaodeCoordinateLng != null" >
+        gaode_coordinate_lng = #{record.gaodeCoordinateLng,jdbcType=DOUBLE},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createUserId != null" >
+        create_user_id = #{record.createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.updateUserId != null" >
+        update_user_id = #{record.updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.batch != null" >
+        batch = #{record.batch,jdbcType=BIT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_town
+    set town_id = #{record.townId,jdbcType=BIGINT},
+      gb_code = #{record.gbCode,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      county_id = #{record.countyId,jdbcType=BIGINT},
+      square_area = #{record.squareArea,jdbcType=INTEGER},
+      introduction = #{record.introduction,jdbcType=VARCHAR},
+      household_number = #{record.householdNumber,jdbcType=INTEGER},
+      resident_population_number = #{record.residentPopulationNumber,jdbcType=INTEGER},
+      baidu_coordinate_x = #{record.baiduCoordinateX,jdbcType=DOUBLE},
+      baidu_coordinate_y = #{record.baiduCoordinateY,jdbcType=DOUBLE},
+      gaode_coordinate_lat = #{record.gaodeCoordinateLat,jdbcType=DOUBLE},
+      gaode_coordinate_lng = #{record.gaodeCoordinateLng,jdbcType=DOUBLE},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      create_user_id = #{record.createUserId,jdbcType=BIGINT},
+      update_user_id = #{record.updateUserId,jdbcType=BIGINT},
+      batch = #{record.batch,jdbcType=BIT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TTown" >
+    update t_town
+    <set >
+      <if test="gbCode != null" >
+        gb_code = #{gbCode,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="countyId != null" >
+        county_id = #{countyId,jdbcType=BIGINT},
+      </if>
+      <if test="squareArea != null" >
+        square_area = #{squareArea,jdbcType=INTEGER},
+      </if>
+      <if test="introduction != null" >
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="householdNumber != null" >
+        household_number = #{householdNumber,jdbcType=INTEGER},
+      </if>
+      <if test="residentPopulationNumber != null" >
+        resident_population_number = #{residentPopulationNumber,jdbcType=INTEGER},
+      </if>
+      <if test="baiduCoordinateX != null" >
+        baidu_coordinate_x = #{baiduCoordinateX,jdbcType=DOUBLE},
+      </if>
+      <if test="baiduCoordinateY != null" >
+        baidu_coordinate_y = #{baiduCoordinateY,jdbcType=DOUBLE},
+      </if>
+      <if test="gaodeCoordinateLat != null" >
+        gaode_coordinate_lat = #{gaodeCoordinateLat,jdbcType=DOUBLE},
+      </if>
+      <if test="gaodeCoordinateLng != null" >
+        gaode_coordinate_lng = #{gaodeCoordinateLng,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null" >
+        create_user_id = #{createUserId,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null" >
+        update_user_id = #{updateUserId,jdbcType=BIGINT},
+      </if>
+      <if test="batch != null" >
+        batch = #{batch,jdbcType=BIT},
+      </if>
+    </set>
+    where town_id = #{townId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TTown" >
+    update t_town
+    set gb_code = #{gbCode,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      county_id = #{countyId,jdbcType=BIGINT},
+      square_area = #{squareArea,jdbcType=INTEGER},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      household_number = #{householdNumber,jdbcType=INTEGER},
+      resident_population_number = #{residentPopulationNumber,jdbcType=INTEGER},
+      baidu_coordinate_x = #{baiduCoordinateX,jdbcType=DOUBLE},
+      baidu_coordinate_y = #{baiduCoordinateY,jdbcType=DOUBLE},
+      gaode_coordinate_lat = #{gaodeCoordinateLat,jdbcType=DOUBLE},
+      gaode_coordinate_lng = #{gaodeCoordinateLng,jdbcType=DOUBLE},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      create_user_id = #{createUserId,jdbcType=BIGINT},
+      update_user_id = #{updateUserId,jdbcType=BIGINT},
+      batch = #{batch,jdbcType=BIT}
+    where town_id = #{townId,jdbcType=BIGINT}
+  </update>
+  
+  <!-- 查询 列表-->
+ <select id="queryTtownInfo" parameterType="java.util.Map" resultMap="AreaMapVoMap">
+     select
+			 t.town_id id, 
+			 t.gb_code , 
+			 t.name area_name, 
+			 t.county_id , 
+			 t.square_area , 
+			 t.introduction , 
+			 t.household_number , 
+			 t.resident_population_number , 
+			 t.baidu_coordinate_x longitude_x, 
+			 t.baidu_coordinate_y longitude_y, 
+			 t.gaode_coordinate_lat gaodeLat,
+			 t.gaode_coordinate_lng gaodeLng,
+			 t.status , 
+			 t.version , 
+			 t.create_user , 
+			 t.create_time , 
+			 t.update_user , 
+			 t.update_time,
+			 6 type
+	   from  t_town t
+     <where> 
+     	and t.status=0
+		       <if test="townId != null">
+				  and town_id = #{townId}
+				</if>
+		       <if test="gbCode != null and gbCode !=''">
+				  and gb_code = #{gbCode}
+				</if>
+		       <if test="name != null and name !=''">
+				  and name = #{name}
+				</if>
+		       <if test="countyId != null">
+				  and county_id = #{countyId}
+				</if>
+		       <if test="squareArea != null and squareArea !=''">
+				  and square_area = #{squareArea}
+				</if>
+		       <if test="introduction != null and introduction !=''">
+				  and introduction = #{introduction}
+				</if>
+		       <if test="householdNum != null and householdNum !=''">
+				  and household_number = #{householdNum}
+				</if>
+		       <if test="residentNum != null and residentNum !=''">
+				  and resident_population_number = #{residentNum}
+				</if>
+		       <if test="coordinateX != null and coordinateX !=''">
+				  and baidu_coordinate_x = #{coordinateX}
+				</if>
+		       <if test="coordinateY != null and coordinateY !=''">
+				  and baidu_coordinate_y = #{coordinateY}
+				</if>
+				<if test="gaodeLat != null and gaodeLat !=''">
+				  and gaode_coordinate_lat = #{gaodeLat}
+				</if>
+				<if test="gaodeLng != null and gaodeLng !=''">
+				  and gaode_coordinate_lng = #{gaodeLng}
+				</if>
+		       <if test="version != null">
+				  and version = #{version}
+				</if>
+		       <if test="createUser != null and createUser !=''">
+				  and create_user = #{createUser}
+				</if>
+		        <if test="start_create_time !=null and start_create_time !=''">
+				   and create_time &gt;= #{start_create_time,jdbcType=TIMESTAMP}
+				</if>
+		        <if test="end_create_time !=null and end_create_time !=''">
+				   and create_time &lt;= #{end_create_time,jdbcType=TIMESTAMP}
+				</if>
+		       <if test="createTime != null and createTime !=''">
+				  and create_time = #{createTime}
+				</if>
+		       <if test="updateUser != null and updateUser !=''">
+				  and update_user = #{updateUser}
+				</if>
+		         <if test="start_update_time !=null and start_update_time !=''">
+				   and update_time &gt;= #{start_update_time,jdbcType=TIMESTAMP}
+				</if>
+		        <if test="end_update_time !=null and end_update_time !=''">
+				   and update_time &lt;= #{end_update_time,jdbcType=TIMESTAMP}
+				</if>
+     </where>
+     <if test="from != null  and  rows != null ">
+		     limit #{ from},#{ rows}
+        </if>
+ </select>
+</mapper>

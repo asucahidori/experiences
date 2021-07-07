@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TbAreaMapper">
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TbArea">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="area_no" jdbcType="INTEGER" property="areaNo" />
+    <result column="area_name" jdbcType="VARCHAR" property="areaName" />
+    <result column="parent_no" jdbcType="INTEGER" property="parentNo" />
+    <result column="area_code" jdbcType="VARCHAR" property="areaCode" />
+    <result column="area_level" jdbcType="INTEGER" property="areaLevel" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="populationAmount" jdbcType="INTEGER" property="populationamount" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, area_no, area_name, parent_no, area_code, area_level, type_name, populationAmount
+  </sql>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_area
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TbAreaExample" resultType="java.lang.Integer">
+    select count(*) from tb_area
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <select id="selectAllCity" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_area
+    where parent_no = 0
+  </select>
+  <select id="selectDataOfCity" parameterType="com.gatz.discovery.modules.cidm.model.TbArea" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_area
+    where parent_no = #{areaNo,jdbcType=INTEGER}
+  </select>
+</mapper>

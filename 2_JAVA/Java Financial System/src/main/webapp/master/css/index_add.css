@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.sign_ad{ width:100px; height:80px; background-color:#F00;}
+.user_ad{ width:100px; height:80px; background-color:#FC3;}
+
+
+.main_report{ width:176px; height:40px; position:absolute; left:550px; top:200px; display:none;}
+.main_report_tu{ width:40px; height:40px; position:absolute; left:0px; top:0px;}
+.main_report_right{ width:120px; height:30px; position:absolute; right:0px; top:0px; background-color:#110f43; border-radius:5px; padding:5px; line-height:30px; text-align:center; color:#FFF;}
+.main_report_right a{ color:#82c5fd;}

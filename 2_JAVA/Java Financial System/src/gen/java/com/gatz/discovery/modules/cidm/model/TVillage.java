@@ -1,0 +1,265 @@
+package com.gatz.discovery.modules.cidm.model;
+
+import java.util.Date;
+
+public class TVillage {
+    private Long villageId;
+
+    private String gbCode;
+
+    private String name;
+
+    private String squareArea;
+
+    private Integer householdNumber;
+
+    private Double residentPopulationNumber;
+
+    private Double baiduCoordinateX;
+
+    private Double baiduCoordinateY;
+
+    private Double gaodeCoordinateLat;
+
+    private Double gaodeCoordinateLng;
+
+    private String introduction;
+
+    private String committeeAddress;
+
+    private String committeePhone;
+
+    private Long townId;
+
+    private Integer type;
+
+    private Integer approveStatus;
+
+    private Long attachmentId;
+
+    private Integer status;
+
+    private Integer version;
+
+    private String createUser;
+
+    private Date createTime;
+
+    private String updateUser;
+
+    private Date updateTime;
+
+    private Long createUserId;
+
+    private Long updateUserId;
+
+    private Boolean batch;
+
+    public Long getVillageId() {
+        return villageId;
+    }
+
+    public void setVillageId(Long villageId) {
+        this.villageId = villageId;
+    }
+
+    public String getGbCode() {
+        return gbCode;
+    }
+
+    public void setGbCode(String gbCode) {
+        this.gbCode = gbCode == null ? null : gbCode.trim();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public String getSquareArea() {
+        return squareArea;
+    }
+
+    public void setSquareArea(String squareArea) {
+        this.squareArea = squareArea == null ? null : squareArea.trim();
+    }
+
+    public Integer getHouseholdNumber() {
+        return householdNumber;
+    }
+
+    public void setHouseholdNumber(Integer householdNumber) {
+        this.householdNumber = householdNumber;
+    }
+
+    public Double getResidentPopulationNumber() {
+        return residentPopulationNumber;
+    }
+
+    public void setResidentPopulationNumber(Double residentPopulationNumber) {
+        this.residentPopulationNumber = residentPopulationNumber;
+    }
+
+    public Double getBaiduCoordinateX() {
+        return baiduCoordinateX;
+    }
+
+    public void setBaiduCoordinateX(Double baiduCoordinateX) {
+        this.baiduCoordinateX = baiduCoordinateX;
+    }
+
+    public Double getBaiduCoordinateY() {
+        return baiduCoordinateY;
+    }
+
+    public void setBaiduCoordinateY(Double baiduCoordinateY) {
+        this.baiduCoordinateY = baiduCoordinateY;
+    }
+
+    public Double getGaodeCoordinateLat() {
+        return gaodeCoordinateLat;
+    }
+
+    public void setGaodeCoordinateLat(Double gaodeCoordinateLat) {
+        this.gaodeCoordinateLat = gaodeCoordinateLat;
+    }
+
+    public Double getGaodeCoordinateLng() {
+        return gaodeCoordinateLng;
+    }
+
+    public void setGaodeCoordinateLng(Double gaodeCoordinateLng) {
+        this.gaodeCoordinateLng = gaodeCoordinateLng;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction == null ? null : introduction.trim();
+    }
+
+    public String getCommitteeAddress() {
+        return committeeAddress;
+    }
+
+    public void setCommitteeAddress(String committeeAddress) {
+        this.committeeAddress = committeeAddress == null ? null : committeeAddress.trim();
+    }
+
+    public String getCommitteePhone() {
+        return committeePhone;
+    }
+
+    public void setCommitteePhone(String committeePhone) {
+        this.committeePhone = committeePhone == null ? null : committeePhone.trim();
+    }
+
+    public Long getTownId() {
+        return townId;
+    }
+
+    public void setTownId(Long townId) {
+        this.townId = townId;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Integer getApproveStatus() {
+        return approveStatus;
+    }
+
+    public void setApproveStatus(Integer approveStatus) {
+        this.approveStatus = approveStatus;
+    }
+
+    public Long getAttachmentId() {
+        return attachmentId;
+    }
+
+    public void setAttachmentId(Long attachmentId) {
+        this.attachmentId = attachmentId;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public String getCreateUser() {
+        return createUser;
+    }
+
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser == null ? null : createUser.trim();
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateUser() {
+        return updateUser;
+    }
+
+    public void setUpdateUser(String updateUser) {
+        this.updateUser = updateUser == null ? null : updateUser.trim();
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Long getCreateUserId() {
+        return createUserId;
+    }
+
+    public void setCreateUserId(Long createUserId) {
+        this.createUserId = createUserId;
+    }
+
+    public Long getUpdateUserId() {
+        return updateUserId;
+    }
+
+    public void setUpdateUserId(Long updateUserId) {
+        this.updateUserId = updateUserId;
+    }
+
+    public Boolean getBatch() {
+        return batch;
+    }
+
+    public void setBatch(Boolean batch) {
+        this.batch = batch;
+    }
+}

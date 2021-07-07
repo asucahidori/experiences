@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TSumOrddetail5grdMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grd" >
+    <id column="area_id" property="areaId" jdbcType="BIGINT" />
+    <id column="area_type" property="areaType" jdbcType="SMALLINT" />
+    <id column="date" property="date" jdbcType="DATE" />
+    <result column="order_type_id" property="orderTypeId" jdbcType="VARCHAR" />
+    <result column="eshop_prodserv_id" property="eshopProdservId" jdbcType="BIGINT" />
+    <result column="eshop_prodserv_name" property="eshopProdservName" jdbcType="VARCHAR" />
+    <result column="eshop_id" property="eshopId" jdbcType="BIGINT" />
+    <result column="class_id" property="classId" jdbcType="BIGINT" />
+    <result column="product_id" property="productId" jdbcType="BIGINT" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="unit_price" property="unitPrice" jdbcType="DOUBLE" />
+    <result column="quantity" property="quantity" jdbcType="INTEGER" />
+    <result column="trading_price" property="tradingPrice" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    area_id, area_type, date, order_type_id, eshop_prodserv_id, eshop_prodserv_name, 
+    eshop_id, class_id, product_id, product_name, unit_price, quantity, trading_price, 
+    status, version, create_user, create_time, update_user, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grdExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_sum_orddetail_5grd
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grdKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sum_orddetail_5grd
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and area_type = #{areaType,jdbcType=SMALLINT}
+      and date = #{date,jdbcType=DATE}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grdKey" >
+    delete from t_sum_orddetail_5grd
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and area_type = #{areaType,jdbcType=SMALLINT}
+      and date = #{date,jdbcType=DATE}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grdExample" >
+    delete from t_sum_orddetail_5grd
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grd" >
+    insert into t_sum_orddetail_5grd (area_id, area_type, date, 
+      order_type_id, eshop_prodserv_id, eshop_prodserv_name, 
+      eshop_id, class_id, product_id, 
+      product_name, unit_price, quantity, 
+      trading_price, status, version, 
+      create_user, create_time, update_user, 
+      update_time)
+    values (#{areaId,jdbcType=BIGINT}, #{areaType,jdbcType=SMALLINT}, #{date,jdbcType=DATE}, 
+      #{orderTypeId,jdbcType=VARCHAR}, #{eshopProdservId,jdbcType=BIGINT}, #{eshopProdservName,jdbcType=VARCHAR}, 
+      #{eshopId,jdbcType=BIGINT}, #{classId,jdbcType=BIGINT}, #{productId,jdbcType=BIGINT}, 
+      #{productName,jdbcType=VARCHAR}, #{unitPrice,jdbcType=DOUBLE}, #{quantity,jdbcType=INTEGER}, 
+      #{tradingPrice,jdbcType=DOUBLE}, #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, 
+      #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grd" >
+    insert into t_sum_orddetail_5grd
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="areaId != null" >
+        area_id,
+      </if>
+      <if test="areaType != null" >
+        area_type,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="orderTypeId != null" >
+        order_type_id,
+      </if>
+      <if test="eshopProdservId != null" >
+        eshop_prodserv_id,
+      </if>
+      <if test="eshopProdservName != null" >
+        eshop_prodserv_name,
+      </if>
+      <if test="eshopId != null" >
+        eshop_id,
+      </if>
+      <if test="classId != null" >
+        class_id,
+      </if>
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="productName != null" >
+        product_name,
+      </if>
+      <if test="unitPrice != null" >
+        unit_price,
+      </if>
+      <if test="quantity != null" >
+        quantity,
+      </if>
+      <if test="tradingPrice != null" >
+        trading_price,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="areaId != null" >
+        #{areaId,jdbcType=BIGINT},
+      </if>
+      <if test="areaType != null" >
+        #{areaType,jdbcType=SMALLINT},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=DATE},
+      </if>
+      <if test="orderTypeId != null" >
+        #{orderTypeId,jdbcType=VARCHAR},
+      </if>
+      <if test="eshopProdservId != null" >
+        #{eshopProdservId,jdbcType=BIGINT},
+      </if>
+      <if test="eshopProdservName != null" >
+        #{eshopProdservName,jdbcType=VARCHAR},
+      </if>
+      <if test="eshopId != null" >
+        #{eshopId,jdbcType=BIGINT},
+      </if>
+      <if test="classId != null" >
+        #{classId,jdbcType=BIGINT},
+      </if>
+      <if test="productId != null" >
+        #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="productName != null" >
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="unitPrice != null" >
+        #{unitPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="quantity != null" >
+        #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="tradingPrice != null" >
+        #{tradingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grdExample" resultType="java.lang.Integer" >
+    select count(*) from t_sum_orddetail_5grd
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_sum_orddetail_5grd
+    <set >
+      <if test="record.areaId != null" >
+        area_id = #{record.areaId,jdbcType=BIGINT},
+      </if>
+      <if test="record.areaType != null" >
+        area_type = #{record.areaType,jdbcType=SMALLINT},
+      </if>
+      <if test="record.date != null" >
+        date = #{record.date,jdbcType=DATE},
+      </if>
+      <if test="record.orderTypeId != null" >
+        order_type_id = #{record.orderTypeId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.eshopProdservId != null" >
+        eshop_prodserv_id = #{record.eshopProdservId,jdbcType=BIGINT},
+      </if>
+      <if test="record.eshopProdservName != null" >
+        eshop_prodserv_name = #{record.eshopProdservName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.eshopId != null" >
+        eshop_id = #{record.eshopId,jdbcType=BIGINT},
+      </if>
+      <if test="record.classId != null" >
+        class_id = #{record.classId,jdbcType=BIGINT},
+      </if>
+      <if test="record.productId != null" >
+        product_id = #{record.productId,jdbcType=BIGINT},
+      </if>
+      <if test="record.productName != null" >
+        product_name = #{record.productName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitPrice != null" >
+        unit_price = #{record.unitPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.quantity != null" >
+        quantity = #{record.quantity,jdbcType=INTEGER},
+      </if>
+      <if test="record.tradingPrice != null" >
+        trading_price = #{record.tradingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_sum_orddetail_5grd
+    set area_id = #{record.areaId,jdbcType=BIGINT},
+      area_type = #{record.areaType,jdbcType=SMALLINT},
+      date = #{record.date,jdbcType=DATE},
+      order_type_id = #{record.orderTypeId,jdbcType=VARCHAR},
+      eshop_prodserv_id = #{record.eshopProdservId,jdbcType=BIGINT},
+      eshop_prodserv_name = #{record.eshopProdservName,jdbcType=VARCHAR},
+      eshop_id = #{record.eshopId,jdbcType=BIGINT},
+      class_id = #{record.classId,jdbcType=BIGINT},
+      product_id = #{record.productId,jdbcType=BIGINT},
+      product_name = #{record.productName,jdbcType=VARCHAR},
+      unit_price = #{record.unitPrice,jdbcType=DOUBLE},
+      quantity = #{record.quantity,jdbcType=INTEGER},
+      trading_price = #{record.tradingPrice,jdbcType=DOUBLE},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grd" >
+    update t_sum_orddetail_5grd
+    <set >
+      <if test="orderTypeId != null" >
+        order_type_id = #{orderTypeId,jdbcType=VARCHAR},
+      </if>
+      <if test="eshopProdservId != null" >
+        eshop_prodserv_id = #{eshopProdservId,jdbcType=BIGINT},
+      </if>
+      <if test="eshopProdservName != null" >
+        eshop_prodserv_name = #{eshopProdservName,jdbcType=VARCHAR},
+      </if>
+      <if test="eshopId != null" >
+        eshop_id = #{eshopId,jdbcType=BIGINT},
+      </if>
+      <if test="classId != null" >
+        class_id = #{classId,jdbcType=BIGINT},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="productName != null" >
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="unitPrice != null" >
+        unit_price = #{unitPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="quantity != null" >
+        quantity = #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="tradingPrice != null" >
+        trading_price = #{tradingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and area_type = #{areaType,jdbcType=SMALLINT}
+      and date = #{date,jdbcType=DATE}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grd" >
+    update t_sum_orddetail_5grd
+    set order_type_id = #{orderTypeId,jdbcType=VARCHAR},
+      eshop_prodserv_id = #{eshopProdservId,jdbcType=BIGINT},
+      eshop_prodserv_name = #{eshopProdservName,jdbcType=VARCHAR},
+      eshop_id = #{eshopId,jdbcType=BIGINT},
+      class_id = #{classId,jdbcType=BIGINT},
+      product_id = #{productId,jdbcType=BIGINT},
+      product_name = #{productName,jdbcType=VARCHAR},
+      unit_price = #{unitPrice,jdbcType=DOUBLE},
+      quantity = #{quantity,jdbcType=INTEGER},
+      trading_price = #{tradingPrice,jdbcType=DOUBLE},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and area_type = #{areaType,jdbcType=SMALLINT}
+      and date = #{date,jdbcType=DATE}
+  </update>
+  
+    <select id="searchTSumOrddetail5grdTop10" parameterType="com.gatz.discovery.modules.cidm.model.TSumOrddetail5grd" resultType="java.util.HashMap" >
+ 	SELECT a.productName,a.tradingPrice from 
+ 	(SELECT product_name AS productName, trading_price AS tradingPrice ,date
+ 	from t_sum_orddetail_5grd 
+ 	where 
+ 	area_type = #{areaType}
+ 	and status=0
+ 	and area_id = #{areaId} and date=(SELECT MAX(date) from t_sum_orddetail_5grd WHERE area_type = #{areaType}
+ 	and area_id = #{areaId})) a ORDER BY a.tradingPrice LIMIT 10;
+  </select>
+</mapper>

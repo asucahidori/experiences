@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TSumPopulationMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TSumPopulation" >
+    <id column="area_id" property="areaId" jdbcType="BIGINT" />
+    <id column="date_id" property="dateId" jdbcType="BIGINT" />
+    <result column="area_type" property="areaType" jdbcType="SMALLINT" />
+    <result column="population" property="population" jdbcType="BIGINT" />
+    <result column="male_population" property="malePopulation" jdbcType="BIGINT" />
+    <result column="female_population" property="femalePopulation" jdbcType="BIGINT" />
+    <result column="comsume_level" property="comsumeLevel" jdbcType="SMALLINT" />
+    <result column="nuclear_family" property="nuclearFamily" jdbcType="BIGINT" />
+    <result column="lead_num" property="leadNum" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    area_id, date_id, area_type, population, male_population, female_population, comsume_level, 
+    nuclear_family, lead_num, status, version, create_user, create_time, update_user, 
+    update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulationExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_sum_population
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulationKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sum_population
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and date_id = #{dateId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulationKey" >
+    delete from t_sum_population
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and date_id = #{dateId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulationExample" >
+    delete from t_sum_population
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulation" >
+    insert into t_sum_population (area_id, date_id, area_type, 
+      population, male_population, female_population, 
+      comsume_level, nuclear_family, lead_num, 
+      status, version, create_user, 
+      create_time, update_user, update_time
+      )
+    values (#{areaId,jdbcType=BIGINT}, #{dateId,jdbcType=BIGINT}, #{areaType,jdbcType=SMALLINT}, 
+      #{population,jdbcType=BIGINT}, #{malePopulation,jdbcType=BIGINT}, #{femalePopulation,jdbcType=BIGINT}, 
+      #{comsumeLevel,jdbcType=SMALLINT}, #{nuclearFamily,jdbcType=BIGINT}, #{leadNum,jdbcType=BIGINT}, 
+      #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, #{createUser,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulation" >
+    insert into t_sum_population
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="areaId != null" >
+        area_id,
+      </if>
+      <if test="dateId != null" >
+        date_id,
+      </if>
+      <if test="areaType != null" >
+        area_type,
+      </if>
+      <if test="population != null" >
+        population,
+      </if>
+      <if test="malePopulation != null" >
+        male_population,
+      </if>
+      <if test="femalePopulation != null" >
+        female_population,
+      </if>
+      <if test="comsumeLevel != null" >
+        comsume_level,
+      </if>
+      <if test="nuclearFamily != null" >
+        nuclear_family,
+      </if>
+      <if test="leadNum != null" >
+        lead_num,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="areaId != null" >
+        #{areaId,jdbcType=BIGINT},
+      </if>
+      <if test="dateId != null" >
+        #{dateId,jdbcType=BIGINT},
+      </if>
+      <if test="areaType != null" >
+        #{areaType,jdbcType=SMALLINT},
+      </if>
+      <if test="population != null" >
+        #{population,jdbcType=BIGINT},
+      </if>
+      <if test="malePopulation != null" >
+        #{malePopulation,jdbcType=BIGINT},
+      </if>
+      <if test="femalePopulation != null" >
+        #{femalePopulation,jdbcType=BIGINT},
+      </if>
+      <if test="comsumeLevel != null" >
+        #{comsumeLevel,jdbcType=SMALLINT},
+      </if>
+      <if test="nuclearFamily != null" >
+        #{nuclearFamily,jdbcType=BIGINT},
+      </if>
+      <if test="leadNum != null" >
+        #{leadNum,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulationExample" resultType="java.lang.Integer" >
+    select count(*) from t_sum_population
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_sum_population
+    <set >
+      <if test="record.areaId != null" >
+        area_id = #{record.areaId,jdbcType=BIGINT},
+      </if>
+      <if test="record.dateId != null" >
+        date_id = #{record.dateId,jdbcType=BIGINT},
+      </if>
+      <if test="record.areaType != null" >
+        area_type = #{record.areaType,jdbcType=SMALLINT},
+      </if>
+      <if test="record.population != null" >
+        population = #{record.population,jdbcType=BIGINT},
+      </if>
+      <if test="record.malePopulation != null" >
+        male_population = #{record.malePopulation,jdbcType=BIGINT},
+      </if>
+      <if test="record.femalePopulation != null" >
+        female_population = #{record.femalePopulation,jdbcType=BIGINT},
+      </if>
+      <if test="record.comsumeLevel != null" >
+        comsume_level = #{record.comsumeLevel,jdbcType=SMALLINT},
+      </if>
+      <if test="record.nuclearFamily != null" >
+        nuclear_family = #{record.nuclearFamily,jdbcType=BIGINT},
+      </if>
+      <if test="record.leadNum != null" >
+        lead_num = #{record.leadNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_sum_population
+    set area_id = #{record.areaId,jdbcType=BIGINT},
+      date_id = #{record.dateId,jdbcType=BIGINT},
+      area_type = #{record.areaType,jdbcType=SMALLINT},
+      population = #{record.population,jdbcType=BIGINT},
+      male_population = #{record.malePopulation,jdbcType=BIGINT},
+      female_population = #{record.femalePopulation,jdbcType=BIGINT},
+      comsume_level = #{record.comsumeLevel,jdbcType=SMALLINT},
+      nuclear_family = #{record.nuclearFamily,jdbcType=BIGINT},
+      lead_num = #{record.leadNum,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulation" >
+    update t_sum_population
+    <set >
+      <if test="areaType != null" >
+        area_type = #{areaType,jdbcType=SMALLINT},
+      </if>
+      <if test="population != null" >
+        population = #{population,jdbcType=BIGINT},
+      </if>
+      <if test="malePopulation != null" >
+        male_population = #{malePopulation,jdbcType=BIGINT},
+      </if>
+      <if test="femalePopulation != null" >
+        female_population = #{femalePopulation,jdbcType=BIGINT},
+      </if>
+      <if test="comsumeLevel != null" >
+        comsume_level = #{comsumeLevel,jdbcType=SMALLINT},
+      </if>
+      <if test="nuclearFamily != null" >
+        nuclear_family = #{nuclearFamily,jdbcType=BIGINT},
+      </if>
+      <if test="leadNum != null" >
+        lead_num = #{leadNum,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and date_id = #{dateId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TSumPopulation" >
+    update t_sum_population
+    set area_type = #{areaType,jdbcType=SMALLINT},
+      population = #{population,jdbcType=BIGINT},
+      male_population = #{malePopulation,jdbcType=BIGINT},
+      female_population = #{femalePopulation,jdbcType=BIGINT},
+      comsume_level = #{comsumeLevel,jdbcType=SMALLINT},
+      nuclear_family = #{nuclearFamily,jdbcType=BIGINT},
+      lead_num = #{leadNum,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where area_id = #{areaId,jdbcType=BIGINT}
+      and date_id = #{dateId,jdbcType=BIGINT}
+  </update>
+</mapper>

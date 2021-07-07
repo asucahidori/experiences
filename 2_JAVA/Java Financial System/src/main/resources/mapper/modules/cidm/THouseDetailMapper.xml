@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.THouseDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.THouseDetail" >
+    <id column="house_id" property="houseId" jdbcType="BIGINT" />
+    <result column="house_type" property="houseType" jdbcType="INTEGER" />
+    <result column="floor" property="floor" jdbcType="SMALLINT" />
+    <result column="buildup_area" property="buildupArea" jdbcType="INTEGER" />
+    <result column="purchase_date" property="purchaseDate" jdbcType="DATE" />
+    <result column="decorate_style" property="decorateStyle" jdbcType="VARCHAR" />
+    <result column="decorate_level" property="decorateLevel" jdbcType="VARCHAR" />
+    <result column="TV_brand" property="tvBrand" jdbcType="VARCHAR" />
+    <result column="TV_size" property="tvSize" jdbcType="VARCHAR" />
+    <result column="TV_color" property="tvColor" jdbcType="VARCHAR" />
+    <result column="aircon_brand" property="airconBrand" jdbcType="VARCHAR" />
+    <result column="aircon_type" property="airconType" jdbcType="VARCHAR" />
+    <result column="aircon_color" property="airconColor" jdbcType="VARCHAR" />
+    <result column="room_number" property="roomNumber" jdbcType="TINYINT" />
+    <result column="room_size" property="roomSize" jdbcType="TINYINT" />
+    <result column="room_direction" property="roomDirection" jdbcType="VARCHAR" />
+    <result column="window_number" property="windowNumber" jdbcType="TINYINT" />
+    <result column="window_direction" property="windowDirection" jdbcType="VARCHAR" />
+    <result column="bathroom_number" property="bathroomNumber" jdbcType="TINYINT" />
+    <result column="bathroom_size" property="bathroomSize" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    house_id, house_type, floor, buildup_area, purchase_date, decorate_style, decorate_level, 
+    TV_brand, TV_size, TV_color, aircon_brand, aircon_type, aircon_color, room_number, 
+    room_size, room_direction, window_number, window_direction, bathroom_number, bathroom_size, 
+    status, version, create_user, create_time, update_user, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetailExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_house_detail
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_house_detail
+    where house_id = #{houseId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_house_detail
+    where house_id = #{houseId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetailExample" >
+    delete from t_house_detail
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetail" >
+    insert into t_house_detail (house_id, house_type, floor, 
+      buildup_area, purchase_date, decorate_style, 
+      decorate_level, TV_brand, TV_size, 
+      TV_color, aircon_brand, aircon_type, 
+      aircon_color, room_number, room_size, 
+      room_direction, window_number, window_direction, 
+      bathroom_number, bathroom_size, status, 
+      version, create_user, create_time, 
+      update_user, update_time)
+    values (#{houseId,jdbcType=BIGINT}, #{houseType,jdbcType=INTEGER}, #{floor,jdbcType=SMALLINT}, 
+      #{buildupArea,jdbcType=INTEGER}, #{purchaseDate,jdbcType=DATE}, #{decorateStyle,jdbcType=VARCHAR}, 
+      #{decorateLevel,jdbcType=VARCHAR}, #{tvBrand,jdbcType=VARCHAR}, #{tvSize,jdbcType=VARCHAR}, 
+      #{tvColor,jdbcType=VARCHAR}, #{airconBrand,jdbcType=VARCHAR}, #{airconType,jdbcType=VARCHAR}, 
+      #{airconColor,jdbcType=VARCHAR}, #{roomNumber,jdbcType=TINYINT}, #{roomSize,jdbcType=TINYINT}, 
+      #{roomDirection,jdbcType=VARCHAR}, #{windowNumber,jdbcType=TINYINT}, #{windowDirection,jdbcType=VARCHAR}, 
+      #{bathroomNumber,jdbcType=TINYINT}, #{bathroomSize,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{version,jdbcType=INTEGER}, #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetail" >
+    insert into t_house_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="houseId != null" >
+        house_id,
+      </if>
+      <if test="houseType != null" >
+        house_type,
+      </if>
+      <if test="floor != null" >
+        floor,
+      </if>
+      <if test="buildupArea != null" >
+        buildup_area,
+      </if>
+      <if test="purchaseDate != null" >
+        purchase_date,
+      </if>
+      <if test="decorateStyle != null" >
+        decorate_style,
+      </if>
+      <if test="decorateLevel != null" >
+        decorate_level,
+      </if>
+      <if test="tvBrand != null" >
+        TV_brand,
+      </if>
+      <if test="tvSize != null" >
+        TV_size,
+      </if>
+      <if test="tvColor != null" >
+        TV_color,
+      </if>
+      <if test="airconBrand != null" >
+        aircon_brand,
+      </if>
+      <if test="airconType != null" >
+        aircon_type,
+      </if>
+      <if test="airconColor != null" >
+        aircon_color,
+      </if>
+      <if test="roomNumber != null" >
+        room_number,
+      </if>
+      <if test="roomSize != null" >
+        room_size,
+      </if>
+      <if test="roomDirection != null" >
+        room_direction,
+      </if>
+      <if test="windowNumber != null" >
+        window_number,
+      </if>
+      <if test="windowDirection != null" >
+        window_direction,
+      </if>
+      <if test="bathroomNumber != null" >
+        bathroom_number,
+      </if>
+      <if test="bathroomSize != null" >
+        bathroom_size,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="houseId != null" >
+        #{houseId,jdbcType=BIGINT},
+      </if>
+      <if test="houseType != null" >
+        #{houseType,jdbcType=INTEGER},
+      </if>
+      <if test="floor != null" >
+        #{floor,jdbcType=SMALLINT},
+      </if>
+      <if test="buildupArea != null" >
+        #{buildupArea,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseDate != null" >
+        #{purchaseDate,jdbcType=DATE},
+      </if>
+      <if test="decorateStyle != null" >
+        #{decorateStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="decorateLevel != null" >
+        #{decorateLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="tvBrand != null" >
+        #{tvBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="tvSize != null" >
+        #{tvSize,jdbcType=VARCHAR},
+      </if>
+      <if test="tvColor != null" >
+        #{tvColor,jdbcType=VARCHAR},
+      </if>
+      <if test="airconBrand != null" >
+        #{airconBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="airconType != null" >
+        #{airconType,jdbcType=VARCHAR},
+      </if>
+      <if test="airconColor != null" >
+        #{airconColor,jdbcType=VARCHAR},
+      </if>
+      <if test="roomNumber != null" >
+        #{roomNumber,jdbcType=TINYINT},
+      </if>
+      <if test="roomSize != null" >
+        #{roomSize,jdbcType=TINYINT},
+      </if>
+      <if test="roomDirection != null" >
+        #{roomDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="windowNumber != null" >
+        #{windowNumber,jdbcType=TINYINT},
+      </if>
+      <if test="windowDirection != null" >
+        #{windowDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="bathroomNumber != null" >
+        #{bathroomNumber,jdbcType=TINYINT},
+      </if>
+      <if test="bathroomSize != null" >
+        #{bathroomSize,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetailExample" resultType="java.lang.Integer" >
+    select count(*) from t_house_detail
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_house_detail
+    <set >
+      <if test="record.houseId != null" >
+        house_id = #{record.houseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.houseType != null" >
+        house_type = #{record.houseType,jdbcType=INTEGER},
+      </if>
+      <if test="record.floor != null" >
+        floor = #{record.floor,jdbcType=SMALLINT},
+      </if>
+      <if test="record.buildupArea != null" >
+        buildup_area = #{record.buildupArea,jdbcType=INTEGER},
+      </if>
+      <if test="record.purchaseDate != null" >
+        purchase_date = #{record.purchaseDate,jdbcType=DATE},
+      </if>
+      <if test="record.decorateStyle != null" >
+        decorate_style = #{record.decorateStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.decorateLevel != null" >
+        decorate_level = #{record.decorateLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tvBrand != null" >
+        TV_brand = #{record.tvBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tvSize != null" >
+        TV_size = #{record.tvSize,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tvColor != null" >
+        TV_color = #{record.tvColor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.airconBrand != null" >
+        aircon_brand = #{record.airconBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.airconType != null" >
+        aircon_type = #{record.airconType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.airconColor != null" >
+        aircon_color = #{record.airconColor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomNumber != null" >
+        room_number = #{record.roomNumber,jdbcType=TINYINT},
+      </if>
+      <if test="record.roomSize != null" >
+        room_size = #{record.roomSize,jdbcType=TINYINT},
+      </if>
+      <if test="record.roomDirection != null" >
+        room_direction = #{record.roomDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="record.windowNumber != null" >
+        window_number = #{record.windowNumber,jdbcType=TINYINT},
+      </if>
+      <if test="record.windowDirection != null" >
+        window_direction = #{record.windowDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bathroomNumber != null" >
+        bathroom_number = #{record.bathroomNumber,jdbcType=TINYINT},
+      </if>
+      <if test="record.bathroomSize != null" >
+        bathroom_size = #{record.bathroomSize,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_house_detail
+    set house_id = #{record.houseId,jdbcType=BIGINT},
+      house_type = #{record.houseType,jdbcType=INTEGER},
+      floor = #{record.floor,jdbcType=SMALLINT},
+      buildup_area = #{record.buildupArea,jdbcType=INTEGER},
+      purchase_date = #{record.purchaseDate,jdbcType=DATE},
+      decorate_style = #{record.decorateStyle,jdbcType=VARCHAR},
+      decorate_level = #{record.decorateLevel,jdbcType=VARCHAR},
+      TV_brand = #{record.tvBrand,jdbcType=VARCHAR},
+      TV_size = #{record.tvSize,jdbcType=VARCHAR},
+      TV_color = #{record.tvColor,jdbcType=VARCHAR},
+      aircon_brand = #{record.airconBrand,jdbcType=VARCHAR},
+      aircon_type = #{record.airconType,jdbcType=VARCHAR},
+      aircon_color = #{record.airconColor,jdbcType=VARCHAR},
+      room_number = #{record.roomNumber,jdbcType=TINYINT},
+      room_size = #{record.roomSize,jdbcType=TINYINT},
+      room_direction = #{record.roomDirection,jdbcType=VARCHAR},
+      window_number = #{record.windowNumber,jdbcType=TINYINT},
+      window_direction = #{record.windowDirection,jdbcType=VARCHAR},
+      bathroom_number = #{record.bathroomNumber,jdbcType=TINYINT},
+      bathroom_size = #{record.bathroomSize,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetail" >
+    update t_house_detail
+    <set >
+      <if test="houseType != null" >
+        house_type = #{houseType,jdbcType=INTEGER},
+      </if>
+      <if test="floor != null" >
+        floor = #{floor,jdbcType=SMALLINT},
+      </if>
+      <if test="buildupArea != null" >
+        buildup_area = #{buildupArea,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseDate != null" >
+        purchase_date = #{purchaseDate,jdbcType=DATE},
+      </if>
+      <if test="decorateStyle != null" >
+        decorate_style = #{decorateStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="decorateLevel != null" >
+        decorate_level = #{decorateLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="tvBrand != null" >
+        TV_brand = #{tvBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="tvSize != null" >
+        TV_size = #{tvSize,jdbcType=VARCHAR},
+      </if>
+      <if test="tvColor != null" >
+        TV_color = #{tvColor,jdbcType=VARCHAR},
+      </if>
+      <if test="airconBrand != null" >
+        aircon_brand = #{airconBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="airconType != null" >
+        aircon_type = #{airconType,jdbcType=VARCHAR},
+      </if>
+      <if test="airconColor != null" >
+        aircon_color = #{airconColor,jdbcType=VARCHAR},
+      </if>
+      <if test="roomNumber != null" >
+        room_number = #{roomNumber,jdbcType=TINYINT},
+      </if>
+      <if test="roomSize != null" >
+        room_size = #{roomSize,jdbcType=TINYINT},
+      </if>
+      <if test="roomDirection != null" >
+        room_direction = #{roomDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="windowNumber != null" >
+        window_number = #{windowNumber,jdbcType=TINYINT},
+      </if>
+      <if test="windowDirection != null" >
+        window_direction = #{windowDirection,jdbcType=VARCHAR},
+      </if>
+      <if test="bathroomNumber != null" >
+        bathroom_number = #{bathroomNumber,jdbcType=TINYINT},
+      </if>
+      <if test="bathroomSize != null" >
+        bathroom_size = #{bathroomSize,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where house_id = #{houseId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.THouseDetail" >
+    update t_house_detail
+    set house_type = #{houseType,jdbcType=INTEGER},
+      floor = #{floor,jdbcType=SMALLINT},
+      buildup_area = #{buildupArea,jdbcType=INTEGER},
+      purchase_date = #{purchaseDate,jdbcType=DATE},
+      decorate_style = #{decorateStyle,jdbcType=VARCHAR},
+      decorate_level = #{decorateLevel,jdbcType=VARCHAR},
+      TV_brand = #{tvBrand,jdbcType=VARCHAR},
+      TV_size = #{tvSize,jdbcType=VARCHAR},
+      TV_color = #{tvColor,jdbcType=VARCHAR},
+      aircon_brand = #{airconBrand,jdbcType=VARCHAR},
+      aircon_type = #{airconType,jdbcType=VARCHAR},
+      aircon_color = #{airconColor,jdbcType=VARCHAR},
+      room_number = #{roomNumber,jdbcType=TINYINT},
+      room_size = #{roomSize,jdbcType=TINYINT},
+      room_direction = #{roomDirection,jdbcType=VARCHAR},
+      window_number = #{windowNumber,jdbcType=TINYINT},
+      window_direction = #{windowDirection,jdbcType=VARCHAR},
+      bathroom_number = #{bathroomNumber,jdbcType=TINYINT},
+      bathroom_size = #{bathroomSize,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where house_id = #{houseId,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TPoiServprodTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TPoiServprodType" >
+    <id column="prod_serv_type_id" property="prodServTypeId" jdbcType="BIGINT" />
+    <result column="level1_code" property="level1Code" jdbcType="VARCHAR" />
+    <result column="level1_name" property="level1Name" jdbcType="VARCHAR" />
+    <result column="level2_code" property="level2Code" jdbcType="VARCHAR" />
+    <result column="level2_name" property="level2Name" jdbcType="VARCHAR" />
+    <result column="level3_code" property="level3Code" jdbcType="VARCHAR" />
+    <result column="level3_name" property="level3Name" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    prod_serv_type_id, level1_code, level1_name, level2_code, level2_name, level3_code, 
+    level3_name, status, version, create_user, create_time, update_user, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodTypeExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_poi_servprod_type
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_poi_servprod_type
+    where prod_serv_type_id = #{prodServTypeId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_poi_servprod_type
+    where prod_serv_type_id = #{prodServTypeId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodTypeExample" >
+    delete from t_poi_servprod_type
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodType" >
+    insert into t_poi_servprod_type (prod_serv_type_id, level1_code, level1_name, 
+      level2_code, level2_name, level3_code, 
+      level3_name, status, version, 
+      create_user, create_time, update_user, 
+      update_time)
+    values (#{prodServTypeId,jdbcType=BIGINT}, #{level1Code,jdbcType=VARCHAR}, #{level1Name,jdbcType=VARCHAR}, 
+      #{level2Code,jdbcType=VARCHAR}, #{level2Name,jdbcType=VARCHAR}, #{level3Code,jdbcType=VARCHAR}, 
+      #{level3Name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, 
+      #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodType" >
+    insert into t_poi_servprod_type
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="prodServTypeId != null" >
+        prod_serv_type_id,
+      </if>
+      <if test="level1Code != null" >
+        level1_code,
+      </if>
+      <if test="level1Name != null" >
+        level1_name,
+      </if>
+      <if test="level2Code != null" >
+        level2_code,
+      </if>
+      <if test="level2Name != null" >
+        level2_name,
+      </if>
+      <if test="level3Code != null" >
+        level3_code,
+      </if>
+      <if test="level3Name != null" >
+        level3_name,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="prodServTypeId != null" >
+        #{prodServTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="level1Code != null" >
+        #{level1Code,jdbcType=VARCHAR},
+      </if>
+      <if test="level1Name != null" >
+        #{level1Name,jdbcType=VARCHAR},
+      </if>
+      <if test="level2Code != null" >
+        #{level2Code,jdbcType=VARCHAR},
+      </if>
+      <if test="level2Name != null" >
+        #{level2Name,jdbcType=VARCHAR},
+      </if>
+      <if test="level3Code != null" >
+        #{level3Code,jdbcType=VARCHAR},
+      </if>
+      <if test="level3Name != null" >
+        #{level3Name,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodTypeExample" resultType="java.lang.Integer" >
+    select count(*) from t_poi_servprod_type
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_poi_servprod_type
+    <set >
+      <if test="record.prodServTypeId != null" >
+        prod_serv_type_id = #{record.prodServTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="record.level1Code != null" >
+        level1_code = #{record.level1Code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.level1Name != null" >
+        level1_name = #{record.level1Name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.level2Code != null" >
+        level2_code = #{record.level2Code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.level2Name != null" >
+        level2_name = #{record.level2Name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.level3Code != null" >
+        level3_code = #{record.level3Code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.level3Name != null" >
+        level3_name = #{record.level3Name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_poi_servprod_type
+    set prod_serv_type_id = #{record.prodServTypeId,jdbcType=BIGINT},
+      level1_code = #{record.level1Code,jdbcType=VARCHAR},
+      level1_name = #{record.level1Name,jdbcType=VARCHAR},
+      level2_code = #{record.level2Code,jdbcType=VARCHAR},
+      level2_name = #{record.level2Name,jdbcType=VARCHAR},
+      level3_code = #{record.level3Code,jdbcType=VARCHAR},
+      level3_name = #{record.level3Name,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodType" >
+    update t_poi_servprod_type
+    <set >
+      <if test="level1Code != null" >
+        level1_code = #{level1Code,jdbcType=VARCHAR},
+      </if>
+      <if test="level1Name != null" >
+        level1_name = #{level1Name,jdbcType=VARCHAR},
+      </if>
+      <if test="level2Code != null" >
+        level2_code = #{level2Code,jdbcType=VARCHAR},
+      </if>
+      <if test="level2Name != null" >
+        level2_name = #{level2Name,jdbcType=VARCHAR},
+      </if>
+      <if test="level3Code != null" >
+        level3_code = #{level3Code,jdbcType=VARCHAR},
+      </if>
+      <if test="level3Name != null" >
+        level3_name = #{level3Name,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where prod_serv_type_id = #{prodServTypeId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TPoiServprodType" >
+    update t_poi_servprod_type
+    set level1_code = #{level1Code,jdbcType=VARCHAR},
+      level1_name = #{level1Name,jdbcType=VARCHAR},
+      level2_code = #{level2Code,jdbcType=VARCHAR},
+      level2_name = #{level2Name,jdbcType=VARCHAR},
+      level3_code = #{level3Code,jdbcType=VARCHAR},
+      level3_name = #{level3Name,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where prod_serv_type_id = #{prodServTypeId,jdbcType=BIGINT}
+  </update>
+</mapper>

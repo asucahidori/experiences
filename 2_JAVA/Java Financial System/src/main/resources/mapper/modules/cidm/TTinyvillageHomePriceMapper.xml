@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TTinyvillageHomePriceMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePrice" >
+    <id column="date" property="date" jdbcType="DATE" />
+    <id column="tinyvillage_id" property="tinyvillageId" jdbcType="BIGINT" />
+    <result column="price" property="price" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    date, tinyvillage_id, price, status, version, create_user, create_time, update_user, 
+    update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePriceExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_tinyvillage_home_price
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePriceKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_tinyvillage_home_price
+    where date = #{date,jdbcType=DATE}
+      and tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePriceKey" >
+    delete from t_tinyvillage_home_price
+    where date = #{date,jdbcType=DATE}
+      and tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePriceExample" >
+    delete from t_tinyvillage_home_price
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePrice" >
+    insert into t_tinyvillage_home_price (date, tinyvillage_id, price, 
+      status, version, create_user, 
+      create_time, update_user, update_time
+      )
+    values (#{date,jdbcType=DATE}, #{tinyvillageId,jdbcType=BIGINT}, #{price,jdbcType=BIGINT}, 
+      #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, #{createUser,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePrice" >
+    insert into t_tinyvillage_home_price
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="tinyvillageId != null" >
+        tinyvillage_id,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="date != null" >
+        #{date,jdbcType=DATE},
+      </if>
+      <if test="tinyvillageId != null" >
+        #{tinyvillageId,jdbcType=BIGINT},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePriceExample" resultType="java.lang.Integer" >
+    select count(*) from t_tinyvillage_home_price
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_tinyvillage_home_price
+    <set >
+      <if test="record.date != null" >
+        date = #{record.date,jdbcType=DATE},
+      </if>
+      <if test="record.tinyvillageId != null" >
+        tinyvillage_id = #{record.tinyvillageId,jdbcType=BIGINT},
+      </if>
+      <if test="record.price != null" >
+        price = #{record.price,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_tinyvillage_home_price
+    set date = #{record.date,jdbcType=DATE},
+      tinyvillage_id = #{record.tinyvillageId,jdbcType=BIGINT},
+      price = #{record.price,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePrice" >
+    update t_tinyvillage_home_price
+    <set >
+      <if test="price != null" >
+        price = #{price,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where date = #{date,jdbcType=DATE}
+      and tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageHomePrice" >
+    update t_tinyvillage_home_price
+    set price = #{price,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where date = #{date,jdbcType=DATE}
+      and tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </update>
+  
+  
+  <select id="getCityHomePriceCountry" parameterType="java.lang.String" resultType="java.util.HashMap">
+ SELECT tmp.county_id,tmp.name AS name,FLOOR(IFNULL(AVG(tmp.price),0))/10000 AS price  FROM (
+		SELECT tc.`city_id`,tc.name AS NAME,tc.county_id,ttn.town_id,ttn.name AS tname,tp.tinyvillage_id,tp.price FROM		 
+		t_county tc 
+		LEFT JOIN t_town ttn ON tc.county_id=ttn.county_id 
+		LEFT JOIN t_village tv ON ttn.town_id=tv.town_id
+		LEFT JOIN t_tiny_village ttv ON tv.village_id=ttv.village_id 
+		LEFT JOIN (SELECT * FROM (SELECT t.tinyvillage_id,t.price,t.date FROM t_sum_home_price t ORDER BY t.date DESC) temp GROUP BY temp.tinyvillage_Id ORDER BY temp.date DESC) tp ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		WHERE tc.status=0
+		) tmp 
+		where tmp.city_id in (select tc.city_id from t_city tc where tc.province_id = #{areacode})
+		GROUP BY tmp.county_id,tmp.name
+  </select>
+  <select id="getCityHomePriceCount" parameterType="java.lang.String" resultType="java.util.HashMap">
+	  SELECT tmp.utime as month,FLOOR(AVG(tmp.price)) AS price FROM (
+		SELECT EXTRACT(YEAR_MONTH FROM tp.date) AS utime,tc.name ,tc.county_id,ttn.town_id,ttn.name AS tname,tp.tinyvillage_id,tp.price FROM t_sum_home_price tp INNER JOIN t_tiny_village ttv ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		INNER JOIN t_village tv ON tv.village_id=ttv.village_id 
+		INNER JOIN t_town ttn ON ttn.town_id=tv.town_id
+		INNER JOIN t_county tc ON tc.county_id=ttn.county_id
+		WHERE tc.city_id in (SELECT city_id from t_city WHERE province_id=#{areacode} and `status`=0) and tc.status=0 AND EXTRACT(YEAR_MONTH FROM tp.date) BETWEEN PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-9) AND PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-1)) tmp
+		GROUP BY tmp.utime
+  </select>
+  <select id="getCountryHomePriceTown" parameterType="java.lang.String" resultType="java.util.HashMap">
+	  SELECT tmp.town_id,tmp.name AS name,FLOOR(IFNULL(AVG(tmp.price),0)) AS price FROM (
+		SELECT ttn.town_id,ttn.name,tp.tinyvillage_id,tp.price FROM 
+	        t_town ttn 
+		LEFT JOIN t_village tv ON ttn.town_id=tv.town_id
+		LEFT JOIN t_tiny_village ttv ON tv.village_id=ttv.village_id 
+		LEFT JOIN (SELECT * FROM (SELECT t.tinyvillage_id,t.price,t.date FROM t_sum_home_price t ORDER BY t.date DESC) temp GROUP BY temp.tinyvillage_Id ORDER BY temp.date DESC) tp ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		WHERE ttn.county_id=#{areacode} and ttn.status=0) tmp 
+		GROUP BY tmp.town_id,tmp.name ORDER BY price desc LIMIT 10
+  </select>
+  <select id="getCountryHomePriceCount" parameterType="java.lang.String" resultType="java.util.HashMap">
+	   SELECT tmp.utime as month,FLOOR(AVG(tmp.price)) as price FROM (
+		SELECT EXTRACT(YEAR_MONTH FROM tp.date) AS utime,ttn.town_id,ttn.name,tp.tinyvillage_id,tp.price FROM t_sum_home_price tp INNER JOIN t_tiny_village ttv ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		INNER JOIN t_village tv ON tv.village_id=ttv.village_id 
+		INNER JOIN t_town ttn ON ttn.town_id=tv.town_id
+		WHERE ttn.county_id=#{areacode} and ttn.status=0 AND EXTRACT(YEAR_MONTH FROM tp.date) BETWEEN PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-9) AND PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-1)) tmp
+		GROUP BY tmp.utime 
+  </select>
+  <select id="getTownHomePriceVillage" parameterType="java.lang.String" resultType="java.util.HashMap">
+	   SELECT tmp.village_id AS village_id,tmp.name AS name,FLOOR(IFNULL(AVG(tmp.price),0)) AS price FROM (
+		SELECT tv.village_id,tv.name,tp.tinyvillage_id,tp.price FROM 	
+		t_village tv  
+		LEFT JOIN t_tiny_village ttv ON tv.village_id=ttv.village_id
+		LEFT JOIN (SELECT * FROM (SELECT t.tinyvillage_id,t.price,t.date FROM t_sum_home_price t ORDER BY t.date DESC) temp GROUP BY temp.tinyvillage_Id ORDER BY temp.date DESC) tp ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		WHERE tv.town_id=#{areacode} and tv.status=0
+		) tmp
+		GROUP BY tmp.village_id,tmp.name
+  </select>
+  <select id="getTownHomePriceCount" parameterType="java.lang.String" resultType="java.util.HashMap">
+	  SELECT tmp.utime AS month,FLOOR(AVG(tmp.price)) AS price FROM (
+		SELECT EXTRACT(YEAR_MONTH FROM tp.date) AS utime,tv.village_id,tv.name,tp.tinyvillage_id,tp.price FROM t_sum_home_price tp INNER JOIN t_tiny_village ttv ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		INNER JOIN t_village tv ON tv.village_id=ttv.village_id 
+		WHERE tv.town_id=#{areacode} and tv.status=0 AND EXTRACT(YEAR_MONTH FROM tp.date) BETWEEN PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-9) AND PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-1)) tmp
+		GROUP BY tmp.utime
+  </select>
+  <select id="getVillageHomePriceCount" parameterType="java.lang.String" resultType="java.util.HashMap">
+	  SELECT tmp.utime AS month,FLOOR(AVG(tmp.price)) AS price FROM (
+		SELECT EXTRACT(YEAR_MONTH FROM tp.date) AS utime,ttv.tinyvillage_Id,ttv.name,tp.price FROM t_sum_home_price tp INNER JOIN t_tiny_village ttv ON ttv.tinyvillage_Id=tp.tinyvillage_id
+		WHERE ttv.tinyvillage_Id=#{areacode} and ttv.status=0 AND EXTRACT(YEAR_MONTH FROM tp.date) BETWEEN PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-9) AND PERIOD_ADD(EXTRACT(YEAR_MONTH FROM NOW()),-1)) tmp
+		GROUP BY tmp.utime
+  </select>
+</mapper>

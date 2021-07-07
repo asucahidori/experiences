@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TProvinceMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TProvince" >
+    <id column="province_id" property="provinceId" jdbcType="BIGINT" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="gb_code" property="gbCode" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    province_id, type, gb_code, name, status, version, create_user, create_time, update_user, 
+    update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TProvinceExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_province
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_province
+    where province_id = #{provinceId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_province
+    where province_id = #{provinceId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TProvinceExample" >
+    delete from t_province
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TProvince" >
+    insert into t_province (province_id, type, gb_code, 
+      name, status, version, 
+      create_user, create_time, update_user, 
+      update_time)
+    values (#{provinceId,jdbcType=BIGINT}, #{type,jdbcType=VARCHAR}, #{gbCode,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, 
+      #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TProvince" >
+    insert into t_province
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="provinceId != null" >
+        province_id,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="gbCode != null" >
+        gb_code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="provinceId != null" >
+        #{provinceId,jdbcType=BIGINT},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="gbCode != null" >
+        #{gbCode,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TProvinceExample" resultType="java.lang.Integer" >
+    select count(*) from t_province
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_province
+    <set >
+      <if test="record.provinceId != null" >
+        province_id = #{record.provinceId,jdbcType=BIGINT},
+      </if>
+      <if test="record.type != null" >
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gbCode != null" >
+        gb_code = #{record.gbCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_province
+    set province_id = #{record.provinceId,jdbcType=BIGINT},
+      type = #{record.type,jdbcType=VARCHAR},
+      gb_code = #{record.gbCode,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TProvince" >
+    update t_province
+    <set >
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="gbCode != null" >
+        gb_code = #{gbCode,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where province_id = #{provinceId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TProvince" >
+    update t_province
+    set type = #{type,jdbcType=VARCHAR},
+      gb_code = #{gbCode,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where province_id = #{provinceId,jdbcType=BIGINT}
+  </update>
+  
+  <!-- 查询中国地图省数据 -->
+  <select id="countMapOfChina" resultType="java.util.HashMap">
+    select 
+    p.province_id provinceId,
+    CASE WHEN LOCATE('省',p.name)>0 THEN REPLACE (p.name,'省','')  
+	WHEN LOCATE('市',p.name)>0 THEN REPLACE (p.name,'市','')
+	WHEN LOCATE('古',p.name)>0 THEN SUBSTRING(p.name, 1, 3)
+	WHEN LOCATE('区',p.name)>0 THEN SUBSTRING(p.name, 1, 2)
+    ELSE p.name END AS name,
+    p.gb_code gbCode,
+    COUNT(c.province_id) number 
+    from t_province p LEFT JOIN t_customer c
+	on p.province_id = c.province_id WHERE p.status=0
+	GROUP BY p.province_id,p.name,p.gb_code
+  </select>
+  
+  <!-- 查询中国地图市数据 -->
+  <select id="countMapOfChinaCity" resultType="java.util.HashMap" parameterType="java.lang.String">
+  	select 
+	c.province_id proviceId,
+	c.city_id cityId,
+	c.gb_code gbCode,
+	c.name,
+	COUNT(u.city_id) number
+	from t_city c LEFT JOIN t_customer u on c.city_id = u.city_id
+	where 1=1 and c.status=0
+	<if test="proviceId != null and proviceId != ''">
+		and c.province_id = #{proviceId,jdbcType=VARCHAR}
+	</if>
+	GROUP BY c.city_id, c.gb_code, c.name, c.province_id
+  </select>
+  
+  <!-- 查询中国地图区县数据和人口数据 -->
+  <select id="countMapOfChinaCounty" resultType="java.util.HashMap" parameterType="java.lang.String">
+  	select 
+		c.county_id countyId,
+		c.gb_code gbCode,
+		c.name name,
+		c.city_id cityId,
+		COUNT(u.county_id) countyNumber
+	from t_county c LEFT JOIN t_customer u
+		on c.county_id = u.county_id
+	where 1=1 and c.status=0
+	<if test="cityId != null and cityId != ''">
+		and c.city_id = #{cityId,jdbcType=VARCHAR}
+	</if>
+	GROUP BY c.county_id, c.gb_code, c.name, c.city_id
+  </select>
+  
+  <!-- 核心数据 人均收入、人均支出  -->
+  <select id="countInCome" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	select sum(g.income) as income, sum(g.expend) as expend
+	from t_gdp g
+	where 1=1 and g.status=0
+	<if test="id != null and id != ''">
+		and g.area_id = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType != null and areaType != ''">
+		and g.area_type = #{areaType,jdbcType=VARCHAR}
+	</if>
+	<if test="lastYearDate != null and lastYearDate != ''">
+		and g.date_id >= #{lastYearDate,jdbcType=VARCHAR}
+	</if>
+  </select>
+  
+  <!-- 核心数据统计国安社区用户 -->
+  <select id="countCustomer" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	select count(*) customerNumber from t_customer c 
+  	where 1=1 and c.status=0 and customer_type = 10 AND c.province_id IS NOT NULL AND c.city_id IS NOT NULL AND c.county_id IS NOT NULL 
+AND c.town_id IS NOT NULL AND c.village_id IS NOT NULL
+	<if test="areaType =='1'.toString() and id != null and id != ''">
+		and c.province_id = #{id,jdbcType=VARCHAR}  
+	</if>
+	<if test="areaType =='2'.toString() and id != null and id != ''">
+		and c.city_id = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='3'.toString() and id != null and id != ''">
+		and c.county_id = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='4'.toString() and id != null and id != ''">
+		and c.town_id = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='5'.toString() and id != null and id != ''">
+		and c.village_id = #{id,jdbcType=VARCHAR}
+	</if>
+	
+	<if test="areaType =='6'.toString() and id != null and id != ''">
+		and c.town_id = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='7'.toString() and id != null and id != ''">
+		and c.village_id = #{id,jdbcType=VARCHAR}
+	</if>
+  </select>
+  
+  <!-- 核心数据统计国安门店数 -->
+  <select id="countStore" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	select count(*) storeNumber from t_store s
+	where 1=1 and s.status=0
+	<if test="areaType =='1'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(s.complete_address, ',', 1) =  #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='2'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(SUBSTRING_INDEX(s.complete_address, ',', 2),',',-1) = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='3'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(SUBSTRING_INDEX(s.complete_address, ',', 3),',',-1) = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='4'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(SUBSTRING_INDEX(s.complete_address, ',', 4),',',-1) = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='5'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(SUBSTRING_INDEX(s.complete_address, ',', 5),',',-1) = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='6'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(SUBSTRING_INDEX(s.complete_address, ',', 6),',',-1) = #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType =='7'.toString() and id != null and id != ''">
+		and SUBSTRING_INDEX(SUBSTRING_INDEX(s.complete_address, ',', 7),',',-1) = #{id,jdbcType=VARCHAR}
+	</if>
+  </select>
+  
+  <!-- 核心数据统计国安社区潜力用户、消费等级 、核心家庭-->
+  <select id="countSumPopulation" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	select 
+	p.comsume_level comsumeLevel,
+	p.lead_num leadNum,
+	p.nuclear_family nuclearFamily
+	from t_sum_population p
+	where 1=1 and p.status=0
+	<if test="areaType != null and areaType != ''">
+		and p.area_type = #{areaType,jdbcType=VARCHAR}
+	</if>
+	<if test="id != null and id != ''">
+		and p.area_id = #{id,jdbcType=VARCHAR}
+	</if>
+	and p.date_id = (
+		select max(date_id) from t_sum_population where 1=1
+		<if test="areaType != null and areaType != ''">
+			and area_type = #{areaType,jdbcType=VARCHAR}
+		</if>
+		<if test="id != null and id != ''">
+			and area_id = #{id,jdbcType=VARCHAR}
+		</if>
+	)	
+  </select>
+  
+  <!-- 查询住宅户数 -->
+  <select id="countMapOfChinaHouseholds" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+ 	select s.households from t_sum_house s 
+	where 1=1 and s.status=0
+	<if test="id != null and id != ''">
+		and s.area_id = #{id,jdbcType=VARCHAR}
+	</if> 
+	<if test="areaType != null and areaType != ''">
+		and s.area_type = #{areaType,jdbcType=VARCHAR}
+	</if>
+	and s.date_id = (SELECT max(date_id) from t_sum_house where 1=1 
+		<if test="id != null and id != ''">
+			and area_id = #{id,jdbcType=VARCHAR}
+		</if> 
+		<if test="areaType != null and areaType != ''">
+			and area_type = #{areaType,jdbcType=VARCHAR}
+		</if>
+		)
+  </select>
+
+  
+  <!-- 查询 列表-->
+  <select id="queryTprovince" parameterType="java.util.HashMap" resultMap="BaseResultMap">
+     select
+			 t.province_id, 
+			 t.type, 
+			 t.gb_code, 
+			 t.name, 
+			 t.status, 
+			 t.version, 
+			 t.create_user, 
+			 t.create_time, 
+			 t.update_user, 
+			 t.update_time
+	   from  t_province t
+    <where> 
+    	and t.status=0
+		       <if test="provinceId != null">
+				  and province_id = #{provinceId}
+				</if>
+		       <if test="type != null and type !=''">
+				  and type = #{type}
+				</if>
+		       <if test="gbCode != null and gbCode !=''">
+				  and gb_code = #{gbCode}
+				</if>
+		       <if test="name != null and name !=''">
+				  and name = #{name}
+				</if>
+		       <if test="version != null">
+				  and version = #{version}
+				</if>
+		       <if test="createUser != null and createUser !=''">
+				  and create_user = #{createUser}
+				</if>
+		        <if test="start_create_time !=null and start_create_time !=''">
+				   and create_time &gt;= #{start_create_time,jdbcType=TIMESTAMP}
+				</if>
+		        <if test="end_create_time !=null and end_create_time !=''">
+				   and create_time &lt;= #{end_create_time,jdbcType=TIMESTAMP}
+				</if>
+		       <if test="createTime != null and createTime !=''">
+				  and create_time = #{createTime}
+				</if>
+		       <if test="updateUser != null and updateUser !=''">
+				  and update_user = #{updateUser}
+				</if>
+		         <if test="start_update_time !=null and start_update_time !=''">
+				   and update_time &gt;= #{start_update_time,jdbcType=TIMESTAMP}
+				</if>
+		        <if test="end_update_time !=null and end_update_time !=''">
+				   and update_time &lt;= #{end_update_time,jdbcType=TIMESTAMP}
+				</if>
+     </where> 
+     <if test="from != null  and  rows != null ">
+		     limit #{ from},#{ rows}
+     </if> 
+ </select>
+
+
+  
+  <!-- 北京地图国安门店数量 -->
+  <select id="countMapOfChinaCountyStores" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	select 
+	DATE_FORMAT(s.open_time, '%Y-%m') createTime, 
+	s.county_id countyId,
+	COUNT(*) number 
+	from t_store s 
+	WHERE 1=1 and s.status=0
+	<if test="countyIdArray != null">
+		and s.county_id in 
+		<foreach collection="countyIdArray" item="id" index="index" open="(" separator="," close=")" >
+			#{id}
+		</foreach>
+	</if>
+	<if test="createTime != null and createTime != ''">
+		and DATE_FORMAT(s.open_time,'%Y-%m') >= #{createTime,jdbcType=VARCHAR}
+	</if>
+	GROUP BY DATE_FORMAT(s.open_time, '%Y-%m'), s.county_id
+  </select>
+  
+  <!-- 北京地图国安社区用户数量 -->
+  <select id="countMapOfChianCountyVillages" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+	SELECT a.createTime, a.countyId , SUM(b.number) as number FROM 
+(
+select 
+DATE_FORMAT(s.open_time, '%Y-%m') createTime, 
+s.county_id countyId,
+COUNT(*) number 
+from t_store s 
+WHERE 1=1 and s.status=0
+<if test="countyIdArray != null">
+and s.county_id in 
+<foreach collection="countyIdArray" item="id" index="index" open="(" separator="," close=")" >
+			#{id}
+		</foreach>
+</if>
+	<if test="createTime != null and createTime != ''">		
+and DATE_FORMAT(s.open_time,'%Y-%m') >= #{createTime,jdbcType=VARCHAR}
+</if>
+GROUP BY DATE_FORMAT(s.open_time, '%Y-%m'), s.county_id
+) a 
+JOIN 
+(
+select 
+DATE_FORMAT(s.open_time, '%Y-%m') createTime, 
+s.county_id countyId,
+COUNT(*) number
+from t_store s 
+WHERE 1=1 and s.status=0
+
+	<if test="countyIdArray != null">
+and s.county_id in 
+<foreach collection="countyIdArray" item="id" index="index" open="(" separator="," close=")" >
+			#{id}
+		</foreach>
+</if>
+	<if test="createTime != null and createTime != ''">		
+and DATE_FORMAT(s.open_time,'%Y-%m') >= #{createTime,jdbcType=VARCHAR}
+</if>
+
+GROUP BY DATE_FORMAT(s.open_time, '%Y-%m'), s.county_id
+) b
+WHERE a.countyId = b.countyId
+and a.createTime >= b.createTime
+GROUP BY a.createTime,a.countyId;
+  </select>
+  
+  <!-- 北京地图国安社区订单额 -->
+  <select id="countMapOfChinaCountyOrder" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	select 
+	DATE_FORMAT(o.date,'%Y-%m') createTime,
+	o.area_id countyId, 
+	sum(o.trading_price) number
+	FROM t_sum_ord_5grd o
+	where 1=1 and o.status=0
+	<if test="countyIdArray != null">
+		and o.area_id in
+		<foreach collection="countyIdArray" item="id" index="index" open="(" separator="," close=")" >
+			#{id}
+		</foreach>
+	</if>
+	<if test="areaType != null and areaType != ''">
+		and o.area_type = #{areaType,jdbcType=VARCHAR}
+	</if>
+	<if test="createTime != null and createTime != ''">
+		and DATE_FORMAT(o.date,'%Y-%m') >= #{createTime,jdbcType=VARCHAR}
+	</if>
+	GROUP BY DATE_FORMAT(o.date,'%Y-%m'), o.area_id
+  </select>
+
+	 <!-- 核心数据统计国安门订单额 -->
+  <select id="countOrder" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+  	SELECT s.area_id countyId, SUM(s.trading_price) ordercount FROM t_sum_ord_5grd s
+	where 1=1 and s.status=0
+	<if test="id != null and id != ''">
+		and s.area_id =  #{id,jdbcType=VARCHAR}
+	</if>
+	<if test="areaType != null and areaType != ''">
+		and s.area_type = #{areaType,jdbcType=VARCHAR}
+	</if>
+  </select>
+</mapper>

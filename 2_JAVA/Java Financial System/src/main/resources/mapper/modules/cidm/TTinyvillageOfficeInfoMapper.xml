@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gatz.discovery.modules.cidm.dao.TTinyvillageOfficeInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfo" >
+    <id column="tinyvillage_id" property="tinyvillageId" jdbcType="BIGINT" />
+    <result column="district_name" property="districtName" jdbcType="VARCHAR" />
+    <result column="addressa" property="addressa" jdbcType="VARCHAR" />
+    <result column="bld_grade" property="bldGrade" jdbcType="VARCHAR" />
+    <result column="management_type" property="managementType" jdbcType="VARCHAR" />
+    <result column="buildup_area" property="buildupArea" jdbcType="BIGINT" />
+    <result column="sit_area" property="sitArea" jdbcType="BIGINT" />
+    <result column="bay_area" property="bayArea" jdbcType="BIGINT" />
+    <result column="households" property="households" jdbcType="BIGINT" />
+    <result column="FAR" property="far" jdbcType="DECIMAL" />
+    <result column="elevator_num" property="elevatorNum" jdbcType="TINYINT" />
+    <result column="cargo_num" property="cargoNum" jdbcType="TINYINT" />
+    <result column="ground_floor_num" property="groundFloorNum" jdbcType="INTEGER" />
+    <result column="layer_num" property="layerNum" jdbcType="INTEGER" />
+    <result column="ground_park_num" property="groundParkNum" jdbcType="BIGINT" />
+    <result column="layer_park_num" property="layerParkNum" jdbcType="BIGINT" />
+    <result column="property_company" property="propertyCompany" jdbcType="VARCHAR" />
+    <result column="management_fee" property="managementFee" jdbcType="DECIMAL" />
+    <result column="complete_date" property="completeDate" jdbcType="DATE" />
+    <result column="complete_date_type" property="completeDateType" jdbcType="VARCHAR" />
+    <result column="developer" property="developer" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    tinyvillage_id, district_name, addressa, bld_grade, management_type, buildup_area, 
+    sit_area, bay_area, households, FAR, elevator_num, cargo_num, ground_floor_num, layer_num, 
+    ground_park_num, layer_park_num, property_company, management_fee, complete_date, 
+    complete_date_type, developer, status, version, create_user, create_time, update_user, 
+    update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_tinyvillage_office_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_tinyvillage_office_info
+    where tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_tinyvillage_office_info
+    where tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfoExample" >
+    delete from t_tinyvillage_office_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfo" >
+    insert into t_tinyvillage_office_info (tinyvillage_id, district_name, addressa, 
+      bld_grade, management_type, buildup_area, 
+      sit_area, bay_area, households, 
+      FAR, elevator_num, cargo_num, 
+      ground_floor_num, layer_num, ground_park_num, 
+      layer_park_num, property_company, management_fee, 
+      complete_date, complete_date_type, developer, 
+      status, version, create_user, 
+      create_time, update_user, update_time
+      )
+    values (#{tinyvillageId,jdbcType=BIGINT}, #{districtName,jdbcType=VARCHAR}, #{addressa,jdbcType=VARCHAR}, 
+      #{bldGrade,jdbcType=VARCHAR}, #{managementType,jdbcType=VARCHAR}, #{buildupArea,jdbcType=BIGINT}, 
+      #{sitArea,jdbcType=BIGINT}, #{bayArea,jdbcType=BIGINT}, #{households,jdbcType=BIGINT}, 
+      #{far,jdbcType=DECIMAL}, #{elevatorNum,jdbcType=TINYINT}, #{cargoNum,jdbcType=TINYINT}, 
+      #{groundFloorNum,jdbcType=INTEGER}, #{layerNum,jdbcType=INTEGER}, #{groundParkNum,jdbcType=BIGINT}, 
+      #{layerParkNum,jdbcType=BIGINT}, #{propertyCompany,jdbcType=VARCHAR}, #{managementFee,jdbcType=DECIMAL}, 
+      #{completeDate,jdbcType=DATE}, #{completeDateType,jdbcType=VARCHAR}, #{developer,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, #{createUser,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfo" >
+    insert into t_tinyvillage_office_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tinyvillageId != null" >
+        tinyvillage_id,
+      </if>
+      <if test="districtName != null" >
+        district_name,
+      </if>
+      <if test="addressa != null" >
+        addressa,
+      </if>
+      <if test="bldGrade != null" >
+        bld_grade,
+      </if>
+      <if test="managementType != null" >
+        management_type,
+      </if>
+      <if test="buildupArea != null" >
+        buildup_area,
+      </if>
+      <if test="sitArea != null" >
+        sit_area,
+      </if>
+      <if test="bayArea != null" >
+        bay_area,
+      </if>
+      <if test="households != null" >
+        households,
+      </if>
+      <if test="far != null" >
+        FAR,
+      </if>
+      <if test="elevatorNum != null" >
+        elevator_num,
+      </if>
+      <if test="cargoNum != null" >
+        cargo_num,
+      </if>
+      <if test="groundFloorNum != null" >
+        ground_floor_num,
+      </if>
+      <if test="layerNum != null" >
+        layer_num,
+      </if>
+      <if test="groundParkNum != null" >
+        ground_park_num,
+      </if>
+      <if test="layerParkNum != null" >
+        layer_park_num,
+      </if>
+      <if test="propertyCompany != null" >
+        property_company,
+      </if>
+      <if test="managementFee != null" >
+        management_fee,
+      </if>
+      <if test="completeDate != null" >
+        complete_date,
+      </if>
+      <if test="completeDateType != null" >
+        complete_date_type,
+      </if>
+      <if test="developer != null" >
+        developer,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tinyvillageId != null" >
+        #{tinyvillageId,jdbcType=BIGINT},
+      </if>
+      <if test="districtName != null" >
+        #{districtName,jdbcType=VARCHAR},
+      </if>
+      <if test="addressa != null" >
+        #{addressa,jdbcType=VARCHAR},
+      </if>
+      <if test="bldGrade != null" >
+        #{bldGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="managementType != null" >
+        #{managementType,jdbcType=VARCHAR},
+      </if>
+      <if test="buildupArea != null" >
+        #{buildupArea,jdbcType=BIGINT},
+      </if>
+      <if test="sitArea != null" >
+        #{sitArea,jdbcType=BIGINT},
+      </if>
+      <if test="bayArea != null" >
+        #{bayArea,jdbcType=BIGINT},
+      </if>
+      <if test="households != null" >
+        #{households,jdbcType=BIGINT},
+      </if>
+      <if test="far != null" >
+        #{far,jdbcType=DECIMAL},
+      </if>
+      <if test="elevatorNum != null" >
+        #{elevatorNum,jdbcType=TINYINT},
+      </if>
+      <if test="cargoNum != null" >
+        #{cargoNum,jdbcType=TINYINT},
+      </if>
+      <if test="groundFloorNum != null" >
+        #{groundFloorNum,jdbcType=INTEGER},
+      </if>
+      <if test="layerNum != null" >
+        #{layerNum,jdbcType=INTEGER},
+      </if>
+      <if test="groundParkNum != null" >
+        #{groundParkNum,jdbcType=BIGINT},
+      </if>
+      <if test="layerParkNum != null" >
+        #{layerParkNum,jdbcType=BIGINT},
+      </if>
+      <if test="propertyCompany != null" >
+        #{propertyCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="managementFee != null" >
+        #{managementFee,jdbcType=DECIMAL},
+      </if>
+      <if test="completeDate != null" >
+        #{completeDate,jdbcType=DATE},
+      </if>
+      <if test="completeDateType != null" >
+        #{completeDateType,jdbcType=VARCHAR},
+      </if>
+      <if test="developer != null" >
+        #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfoExample" resultType="java.lang.Integer" >
+    select count(*) from t_tinyvillage_office_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_tinyvillage_office_info
+    <set >
+      <if test="record.tinyvillageId != null" >
+        tinyvillage_id = #{record.tinyvillageId,jdbcType=BIGINT},
+      </if>
+      <if test="record.districtName != null" >
+        district_name = #{record.districtName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addressa != null" >
+        addressa = #{record.addressa,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bldGrade != null" >
+        bld_grade = #{record.bldGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="record.managementType != null" >
+        management_type = #{record.managementType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.buildupArea != null" >
+        buildup_area = #{record.buildupArea,jdbcType=BIGINT},
+      </if>
+      <if test="record.sitArea != null" >
+        sit_area = #{record.sitArea,jdbcType=BIGINT},
+      </if>
+      <if test="record.bayArea != null" >
+        bay_area = #{record.bayArea,jdbcType=BIGINT},
+      </if>
+      <if test="record.households != null" >
+        households = #{record.households,jdbcType=BIGINT},
+      </if>
+      <if test="record.far != null" >
+        FAR = #{record.far,jdbcType=DECIMAL},
+      </if>
+      <if test="record.elevatorNum != null" >
+        elevator_num = #{record.elevatorNum,jdbcType=TINYINT},
+      </if>
+      <if test="record.cargoNum != null" >
+        cargo_num = #{record.cargoNum,jdbcType=TINYINT},
+      </if>
+      <if test="record.groundFloorNum != null" >
+        ground_floor_num = #{record.groundFloorNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.layerNum != null" >
+        layer_num = #{record.layerNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.groundParkNum != null" >
+        ground_park_num = #{record.groundParkNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.layerParkNum != null" >
+        layer_park_num = #{record.layerParkNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.propertyCompany != null" >
+        property_company = #{record.propertyCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="record.managementFee != null" >
+        management_fee = #{record.managementFee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.completeDate != null" >
+        complete_date = #{record.completeDate,jdbcType=DATE},
+      </if>
+      <if test="record.completeDateType != null" >
+        complete_date_type = #{record.completeDateType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.developer != null" >
+        developer = #{record.developer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null" >
+        create_user = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null" >
+        update_user = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_tinyvillage_office_info
+    set tinyvillage_id = #{record.tinyvillageId,jdbcType=BIGINT},
+      district_name = #{record.districtName,jdbcType=VARCHAR},
+      addressa = #{record.addressa,jdbcType=VARCHAR},
+      bld_grade = #{record.bldGrade,jdbcType=VARCHAR},
+      management_type = #{record.managementType,jdbcType=VARCHAR},
+      buildup_area = #{record.buildupArea,jdbcType=BIGINT},
+      sit_area = #{record.sitArea,jdbcType=BIGINT},
+      bay_area = #{record.bayArea,jdbcType=BIGINT},
+      households = #{record.households,jdbcType=BIGINT},
+      FAR = #{record.far,jdbcType=DECIMAL},
+      elevator_num = #{record.elevatorNum,jdbcType=TINYINT},
+      cargo_num = #{record.cargoNum,jdbcType=TINYINT},
+      ground_floor_num = #{record.groundFloorNum,jdbcType=INTEGER},
+      layer_num = #{record.layerNum,jdbcType=INTEGER},
+      ground_park_num = #{record.groundParkNum,jdbcType=BIGINT},
+      layer_park_num = #{record.layerParkNum,jdbcType=BIGINT},
+      property_company = #{record.propertyCompany,jdbcType=VARCHAR},
+      management_fee = #{record.managementFee,jdbcType=DECIMAL},
+      complete_date = #{record.completeDate,jdbcType=DATE},
+      complete_date_type = #{record.completeDateType,jdbcType=VARCHAR},
+      developer = #{record.developer,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      version = #{record.version,jdbcType=INTEGER},
+      create_user = #{record.createUser,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_user = #{record.updateUser,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfo" >
+    update t_tinyvillage_office_info
+    <set >
+      <if test="districtName != null" >
+        district_name = #{districtName,jdbcType=VARCHAR},
+      </if>
+      <if test="addressa != null" >
+        addressa = #{addressa,jdbcType=VARCHAR},
+      </if>
+      <if test="bldGrade != null" >
+        bld_grade = #{bldGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="managementType != null" >
+        management_type = #{managementType,jdbcType=VARCHAR},
+      </if>
+      <if test="buildupArea != null" >
+        buildup_area = #{buildupArea,jdbcType=BIGINT},
+      </if>
+      <if test="sitArea != null" >
+        sit_area = #{sitArea,jdbcType=BIGINT},
+      </if>
+      <if test="bayArea != null" >
+        bay_area = #{bayArea,jdbcType=BIGINT},
+      </if>
+      <if test="households != null" >
+        households = #{households,jdbcType=BIGINT},
+      </if>
+      <if test="far != null" >
+        FAR = #{far,jdbcType=DECIMAL},
+      </if>
+      <if test="elevatorNum != null" >
+        elevator_num = #{elevatorNum,jdbcType=TINYINT},
+      </if>
+      <if test="cargoNum != null" >
+        cargo_num = #{cargoNum,jdbcType=TINYINT},
+      </if>
+      <if test="groundFloorNum != null" >
+        ground_floor_num = #{groundFloorNum,jdbcType=INTEGER},
+      </if>
+      <if test="layerNum != null" >
+        layer_num = #{layerNum,jdbcType=INTEGER},
+      </if>
+      <if test="groundParkNum != null" >
+        ground_park_num = #{groundParkNum,jdbcType=BIGINT},
+      </if>
+      <if test="layerParkNum != null" >
+        layer_park_num = #{layerParkNum,jdbcType=BIGINT},
+      </if>
+      <if test="propertyCompany != null" >
+        property_company = #{propertyCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="managementFee != null" >
+        management_fee = #{managementFee,jdbcType=DECIMAL},
+      </if>
+      <if test="completeDate != null" >
+        complete_date = #{completeDate,jdbcType=DATE},
+      </if>
+      <if test="completeDateType != null" >
+        complete_date_type = #{completeDateType,jdbcType=VARCHAR},
+      </if>
+      <if test="developer != null" >
+        developer = #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gatz.discovery.modules.cidm.model.TTinyvillageOfficeInfo" >
+    update t_tinyvillage_office_info
+    set district_name = #{districtName,jdbcType=VARCHAR},
+      addressa = #{addressa,jdbcType=VARCHAR},
+      bld_grade = #{bldGrade,jdbcType=VARCHAR},
+      management_type = #{managementType,jdbcType=VARCHAR},
+      buildup_area = #{buildupArea,jdbcType=BIGINT},
+      sit_area = #{sitArea,jdbcType=BIGINT},
+      bay_area = #{bayArea,jdbcType=BIGINT},
+      households = #{households,jdbcType=BIGINT},
+      FAR = #{far,jdbcType=DECIMAL},
+      elevator_num = #{elevatorNum,jdbcType=TINYINT},
+      cargo_num = #{cargoNum,jdbcType=TINYINT},
+      ground_floor_num = #{groundFloorNum,jdbcType=INTEGER},
+      layer_num = #{layerNum,jdbcType=INTEGER},
+      ground_park_num = #{groundParkNum,jdbcType=BIGINT},
+      layer_park_num = #{layerParkNum,jdbcType=BIGINT},
+      property_company = #{propertyCompany,jdbcType=VARCHAR},
+      management_fee = #{managementFee,jdbcType=DECIMAL},
+      complete_date = #{completeDate,jdbcType=DATE},
+      complete_date_type = #{completeDateType,jdbcType=VARCHAR},
+      developer = #{developer,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      version = #{version,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where tinyvillage_id = #{tinyvillageId,jdbcType=BIGINT}
+  </update>
+  
+  
+  <select id="getVillageAreaCount" parameterType="java.lang.String" resultType="java.util.HashMap">
+	  SELECT tv.village_id,tv.name,SUM(tto.buildup_area) AS buildup_area FROM  t_village tv INNER JOIN t_tiny_village ttv ON ttv.village_id=tv.village_id <!-- AND ttv.tinyvillage_type='2' -->
+		INNER JOIN t_tinyvillage_office_info tto ON tto.tinyvillage_id=ttv.tinyvillage_id
+		WHERE tv.town_id=#{areacode} and tv.status=0
+		GROUP BY tv.village_id,tv.name
+  </select>
+</mapper>
